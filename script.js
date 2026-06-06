@@ -35,19 +35,19 @@ document.addEventListener("DOMContentLoaded", function() {
     const tutorielGrid = document.querySelector(".tutoriel-grid");
     const tutorials = [
         {
-            title: "Introduction au Développement Web",
-            description: "Apprenez les bases de HTML, CSS et JavaScript pour créer vos premières pages web.",
-            image: "https://via.placeholder.com/300x200/007AFF/FFFFFF?text=Web+Dev"
+            title: "99% DES GENS NE CONNAISSENT PAS",
+            description: "Apprenez à optimiser votre présence en ligne et à développer votre carrière dans le domaine tech.",
+            image: "assets/99_DES_GENS_IGNORENT_Mon_secret_pour_dominer_Google.png"
         },
         {
             title: "Maîtriser React.js",
             description: "Plongez dans le monde de React pour construire des interfaces utilisateur dynamiques et performantes.",
-            image: "https://via.placeholder.com/300x200/FF3B30/FFFFFF?text=React.js"
+            image: "assets/dg_clubl_icone_en_32x3.png"
         },
         {
             title: "Sécurité Réseau pour Débutants",
             description: "Comprenez les fondamentaux de la cybersécurité pour protéger vos applications et vos données.",
-            image: "https://via.placeholder.com/300x200/FFD700/000000?text=Cybersecurity"
+            image: "assets/S2CURITe.png"
         }
     ];
 
@@ -69,13 +69,13 @@ document.addEventListener("DOMContentLoaded", function() {
             title: "Guide Ultime d'Orientation et de Réussite en Génie Informatique",
             author: "Danick Arcel Loutaladio",
             description: "Le guide complet pour les étudiants en informatique au Congo-Brazzaville.",
-            image: "https://via.placeholder.com/300x400/007AFF/FFFFFF?text=Livre+Info"
+            image: "assets/GUIDE ULTIME D'ORIENTATION ET DE REUSSITE EN GÉNIE INFORMATIQUE AU CONGO-BRAZZAVILLE.png"
         },
         {
             title: "Ma Trajectoire Réseau",
             author: "Divine Oubourra",
             description: "Un ouvrage sur le parcours et les compétences en réseaux et cybersécurité.",
-            image: "https://via.placeholder.com/300x400/FF3B30/FFFFFF?text=Livre+Reseau"
+            image: "assets/1ere_.jpg"
         }
     ];
 
@@ -84,9 +84,11 @@ document.addEventListener("DOMContentLoaded", function() {
         item.classList.add("grid-item");
         item.innerHTML = `
             <img src="${book.image}" alt="${book.title}">
+            <div>
             <h3>${book.title}</h3>
             <p>Auteur: ${book.author}</p>
             <p>${book.description}</p>
+            </div>
         `;
         bookGrid.appendChild(item);
     });

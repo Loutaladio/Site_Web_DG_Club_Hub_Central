@@ -106,6 +106,7 @@ nav {
 .logo {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .logo img {
@@ -138,15 +139,35 @@ nav ul li a:hover {
     color: var(--primary-color);
 }
 
+a{
+    color: white;
+}
+
+/* Banderol */
+.Banderol {
+    position: absolute;
+    top: 9em;
+    right: 9em;
+    background-color: black;
+    border: 3px solid red;
+    color: var(--text-color);
+    padding: 0.5em 1em;
+    border-radius: 50px;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+}
+
 /* Hero Section */
 #hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assets/hero-bg.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assets/hero-bg.png') no-repeat center center/cover;
     min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     padding: 2em;
 }
 
@@ -161,6 +182,7 @@ nav ul li a:hover {
     font-size: 1.5em;
     margin-bottom: 2em;
     max-width: 700px;
+    font-weight: 400;
 }
 
 button {
@@ -196,10 +218,16 @@ button:hover {
 /* Grilles de contenu (Bento-like) */
 .tutoriel-grid, .book-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
     gap: 2em;
     padding: 2em;
 }
+
+
+.book-grid img{
+   width: 60%;
+}
+
 
 .grid-item {
     background-color: var(--background-color);
@@ -208,7 +236,13 @@ button:hover {
     text-align: left;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
+
+
 
 .grid-item:hover {
     transform: translateY(-5px);
@@ -216,7 +250,7 @@ button:hover {
 }
 
 .grid-item img {
-    max-width: 100%;
+    max-width: 80%;
     border-radius: 8px;
     margin-bottom: 1em;
 }
