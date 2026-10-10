@@ -1,13 +1,36 @@
-/* Variables CSS pour les couleurs */
+/* Palette Pomelli officielle DG Club — thème nuit par défaut. */
 :root {
-    --primary-color: #007AFF; /* Bleu */
-    --secondary-color: #FF3B30; /* Rouge */
-    --accent-color: #FFD700; /* Or */
-    --background-color: #000000; /* Noir mat */
-    --surface-color: #1C1C1E; /* Gris Apple */
-    --text-color: #FFFFFF; /* Blanc */
-    --text-light-color: #E0E0E0;
-    --text-dark-color: #A0A0A0;
+    color-scheme: dark;
+    --brand-navy: #01035D;
+    --brand-cyan: #00F0FF;
+    --brand-red: #E60101;
+    --brand-white: #FFFFFF;
+    --primary-color: var(--brand-cyan);
+    --secondary-color: var(--brand-red);
+    --accent-color: var(--brand-cyan);
+    --background-color: var(--brand-navy);
+    --surface-color: #080B62;
+    --surface-raised: #10146C;
+    --border-color: rgba(0, 240, 255, .20);
+    --text-color: var(--brand-white);
+    --text-light-color: #E8F3FF;
+    --text-dark-color: #B8C8E8;
+    --link-color: var(--brand-cyan);
+}
+
+:root[data-theme="light"] {
+    color-scheme: light;
+    --primary-color: var(--brand-navy);
+    --secondary-color: var(--brand-red);
+    --accent-color: var(--brand-navy);
+    --background-color: var(--brand-white);
+    --surface-color: #F4F6FD;
+    --surface-raised: var(--brand-white);
+    --border-color: rgba(1, 3, 93, .16);
+    --text-color: var(--brand-navy);
+    --text-light-color: #17224F;
+    --text-dark-color: #354166;
+    --link-color: var(--brand-navy);
 }
 
 /* Réinitialisation CSS */
@@ -75,9 +98,8 @@ a:hover {
 section {
     padding: 6em 2em;
     text-align: center;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    opacity: 1;
+    transform: none;
 }
 
 section.is-visible {
@@ -140,7 +162,7 @@ nav ul li a:hover {
 }
 
 a{
-    color: white;
+    color: var(--link-color);
 }
 
 /* Banderol */
@@ -251,6 +273,7 @@ button:hover {
 
 .grid-item img {
     max-width: 80%;
+    height: auto;
     border-radius: 8px;
     margin-bottom: 1em;
 }
@@ -276,9 +299,9 @@ button:hover {
 
 #contact input, #contact textarea {
     padding: 1em;
-    border: 1px solid var(--surface-color);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
-    background-color: #333;
+    background-color: var(--surface-color);
     color: var(--text-color);
     font-size: 1em;
 }

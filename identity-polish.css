@@ -1,0 +1,191 @@
+/* DG Club — refinements: typographic scale, supplied campaign assets and real profile links. */
+:root {
+  --copy-size: 1.08rem;
+  --copy-leading: 1.72;
+  --section-pad: clamp(64px, 8vw, 112px);
+  --brand-link-color: var(--link-color);
+  --focus-color: var(--brand-cyan);
+  --text-muted-color: var(--text-dark-color);
+}
+:root[data-theme="light"] { --focus-color: var(--brand-navy); }
+html { scroll-padding-top: 94px; }
+body { font-size: 17px; line-height: 1.65; }
+.site-links a { font-size: .94rem; }
+.site-links .nav-cta { font-size: .94rem; }
+
+/* Readable copy — keep labels quiet, make explanations comfortably legible. */
+.home-section p:not(.section-kicker):not(.case-label):not(.proof-overline):not(.proof-type):not(.proof-footnote):not(.case-disclaimer):not(.book-author):not(.book-id):not(.offer-label):not(.offer-book-subtitle):not(.form-help):not(.form-status):not(.footer-youtube) {
+  font-size: var(--copy-size);
+  line-height: var(--copy-leading);
+}
+.home-section .section-intro,
+.home-section .book-copy > p:not(.book-author):not(.book-id),
+.home-section .team-card > div > p:not(.case-label),
+.home-section .faq-list details > p,
+.home-section .offer-detail-body > p,
+.home-section .offer-detail-body li { font-size: var(--copy-size); line-height: var(--copy-leading); }
+.home-section .section-kicker,
+.home-section .case-label,
+.home-section .offer-label,
+.home-section .book-author,
+.home-section .module-card > span,
+.home-section .book-id { font-size: .82rem; line-height: 1.5; }
+.home-section .section-heading h2 { font-size: clamp(2rem, 4vw, 3.35rem); line-height: 1.08; }
+.home-section h3 { line-height: 1.18; }
+.hero-eyebrow { font-size: .84rem; }
+.hero-lede { font-size: 1.15rem; line-height: 1.68; }
+.hero-primary, .hero-secondary { font-size: 1rem; }
+.hero-note { font-size: .91rem; }
+.proof-heading > p, .proof-footnote { font-size: .94rem; line-height: 1.65; }
+.site-nav { min-height: 80px; }
+.theme-toggle, .menu-toggle { min-width: 44px; min-height: 44px; }
+
+/* Real supplied covers in a restrained CSS book object; the artwork itself is untouched. */
+.book-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.book-card { min-width: 0; grid-template-columns: minmax(104px, .4fr) minmax(0, .6fr); gap: 19px; align-items: stretch; padding: 22px; }
+.book-visual { position: relative; display: grid; place-items: center; min-width: 0; min-height: 230px; align-self: center; perspective: 1200px; transform: perspective(1200px) rotateY(-3deg) rotateZ(-.6deg); border: 1px solid var(--border-color); border-radius: 3px; background: var(--surface-color); box-shadow: 7px 12px 24px rgba(0, 0, 0, .20); transition: transform .2s ease, box-shadow .2s ease; }
+.book-visual::after { position: absolute; inset: 3px -5px 3px auto; width: 5px; content: ""; border-block: 1px solid var(--border-color); background: linear-gradient(90deg, var(--surface-color), var(--background-color)); }
+.book-visual img { display: block; width: 100%; max-height: 274px; object-fit: contain; object-position: center; }
+.book-visual:hover, .book-visual:focus-visible { transform: perspective(1200px) rotateY(0) rotateZ(0) translateY(-2px); box-shadow: 9px 15px 27px rgba(0, 0, 0, .24); }
+.book-copy { min-width: 0; }
+.book-copy h4 { font-size: 1.23rem; line-height: 1.24; }
+.book-author, .book-id { overflow-wrap: anywhere; }
+.book-links { display: flex; flex-wrap: wrap; gap: 9px 15px; }
+.book-links a { min-height: 36px; display: inline-flex; align-items: center; font-size: .93rem; }
+.book-card--feature { border-color: color-mix(in srgb, var(--brand-cyan) 42%, var(--border-color)); }
+
+/* Campaign posters are shown as supplied, never cropped; tap/click opens the full original. */
+.campaign-section { margin-top: clamp(44px, 7vw, 80px); padding-top: clamp(30px, 4vw, 48px); border-top: 1px solid var(--border-color); }
+.campaign-heading { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, .72fr); align-items: end; gap: 24px; margin-bottom: 25px; }
+.campaign-heading h3 { margin: 0; color: var(--text-color); font-size: clamp(1.55rem, 2.4vw, 2.25rem); letter-spacing: -.045em; }
+.campaign-heading > p { max-width: 56ch; margin: 0; color: var(--text-muted-color); font-size: 1rem; }
+.campaign-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; gap: 20px; }
+.campaign-card { min-width: 0; margin: 0; padding: 13px; border: 1px solid var(--border-color); border-radius: 14px; background: var(--surface-color); }
+.campaign-card > a { display: block; color: inherit; }
+.campaign-card img { display: block; width: 100%; height: auto; object-fit: contain; object-position: center; border-radius: 5px; background: var(--background-color); }
+.campaign-card figcaption { margin-top: 13px; color: var(--text-muted-color); font-size: .94rem; font-weight: 600; line-height: 1.5; }
+.offer-card .campaign-card { width: min(100%, 250px); margin: 24px auto 0; padding: 8px; }
+.offer-card .campaign-card img { max-height: 445px; object-fit: contain; }
+.offer-card .campaign-card figcaption { font-size: .85rem; text-align: center; }
+.campaign-card > a:focus-visible { outline: 3px solid var(--focus-color); outline-offset: 4px; }
+.offer-disclaimer { margin-top: 25px; padding: 18px 20px; border-inline-start: 3px solid var(--brand-red); border-radius: 0 8px 8px 0; background: var(--surface-color); color: var(--text-color); font-size: .98rem !important; line-height: 1.65 !important; }
+
+/* Small, direct profile links. */
+.profile-links { display: flex; flex-wrap: wrap; gap: 8px 15px; margin-top: 16px; }
+.profile-links a, .social-directory a { color: var(--brand-link-color); font-size: .96rem; font-weight: 650; line-height: 1.55; text-underline-offset: 4px; }
+.profile-links a:focus-visible, .social-directory a:focus-visible, .book-links a:focus-visible { outline: 3px solid var(--focus-color); outline-offset: 3px; border-radius: 2px; }
+.social-directory { display: block; margin-top: 36px; padding-top: 27px; border-top: 1px solid var(--border-color); }
+.social-directory > h2 { margin: 0 0 20px; color: var(--text-color); font-size: clamp(1.35rem, 2vw, 1.8rem); line-height: 1.2; }
+.social-directory__groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+.social-directory__groups > div { display: flex; flex-wrap: wrap; align-items: start; gap: 10px 18px; }
+.social-directory__groups h3 { flex: 0 0 100%; margin: 0; color: var(--text-color); font-size: 1.08rem; }
+
+/* A real training flyer and its title; no embedded video or third-party script. */
+.learning-poster { display: grid; grid-template-columns: minmax(135px, .34fr) minmax(0, 1fr); align-items: center; gap: clamp(22px, 4vw, 50px); margin-top: 30px; padding: clamp(20px, 3vw, 34px); border: 1px solid var(--border-color); border-radius: 14px; background: var(--surface-color); }
+.learning-poster > a { display: block; width: min(100%, 290px); justify-self: center; }
+.learning-poster img { display: block; width: 100%; height: auto; object-fit: contain; border: 1px solid var(--border-color); border-radius: 6px; box-shadow: 8px 12px 22px rgba(0,0,0,.18); }
+.learning-poster h4 { margin: 0 0 12px; color: var(--text-color); font-size: clamp(1.4rem, 2.4vw, 2rem); line-height: 1.2; }
+.learning-poster p:not(.section-kicker) { max-width: 62ch; font-size: 1.04rem; line-height: 1.7; }
+
+/* Clear, roomy publisher/social directory and accessible route pages. */
+.footer-column a, .footer-brand > p, .footer-bottom > p, .privacy-note > p { font-size: .94rem; line-height: 1.65; }
+.page-hero { position: relative; isolation: isolate; overflow: hidden; padding: clamp(58px, 8vw, 112px) 24px clamp(50px, 6vw, 78px); border-bottom: 1px solid var(--border-color); background: var(--background-color); }
+.page-hero::before { position: absolute; inset: 0 auto auto 50%; z-index: -1; width: min(1280px, 100%); aspect-ratio: 4 / 1; transform: translateX(-50%); content: ""; background: url("assets/brand/dgclub-banner-alpha.webp") center / contain no-repeat; opacity: .16; filter: blur(1px); mask-image: linear-gradient(to bottom, #000 0%, rgba(0,0,0,.72) 52%, transparent 100%); }
+.page-hero__inner, .page-section__inner { width: min(1160px, 100%); margin-inline: auto; }
+.page-kicker { margin: 0 0 18px; color: var(--brand-cyan); font-size: .86rem; font-weight: 750; letter-spacing: .14em; text-transform: uppercase; }
+:root[data-theme="light"] .page-kicker { color: var(--brand-navy); }
+.page-hero h1 { max-width: 900px; margin: 0 0 22px; color: var(--text-color); font-size: clamp(2.6rem, 6vw, 5.2rem); font-weight: 760; line-height: 1.01; letter-spacing: -.06em; text-wrap: balance; }
+.page-hero__intro { max-width: 72ch; margin: 0; color: var(--text-muted-color); font-size: clamp(1.12rem, 1.8vw, 1.3rem); line-height: 1.7; }
+.page-section { padding: clamp(52px, 7vw, 88px) 24px; border-bottom: 1px solid var(--border-color); background: var(--background-color); }
+.page-section--surface { background: var(--surface-color); }
+.page-section h2 { margin: 0 0 22px; color: var(--text-color); font-size: clamp(1.85rem, 3.4vw, 3rem); line-height: 1.1; letter-spacing: -.045em; }
+.page-section h3 { color: var(--text-color); font-size: clamp(1.2rem, 2vw, 1.5rem); line-height: 1.25; }
+.page-section p, .page-section li { color: var(--text-muted-color); font-size: 1.08rem; line-height: 1.75; }
+.page-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 22px; }
+.page-card { min-width: 0; padding: clamp(22px, 3vw, 32px); border: 1px solid var(--border-color); border-radius: 14px; background: var(--background-color); }
+.page-card img { display: block; width: 100%; max-width: 100%; height: auto; object-fit: contain; }
+.page-card h3 { margin-top: 0; }
+.page-card p:last-child { margin-bottom: 0; }
+.page-section a:not(.button) { color: var(--brand-link-color); text-underline-offset: 4px; }
+.page-cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 25px; }
+.page-cta-row .button { min-height: 48px; font-size: 1rem; }
+.catalog-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 24px; }
+.catalog-card { display: grid; grid-template-columns: minmax(130px, .36fr) minmax(0, .64fr); gap: 22px; align-items: start; padding: 20px; border: 1px solid var(--border-color); border-radius: 14px; background: var(--background-color); }
+.catalog-card img { display: block; width: 100%; max-height: 360px; object-fit: contain; object-position: top center; border-radius: 3px; box-shadow: 8px 13px 25px rgba(0,0,0,.2); }
+.catalog-card h3 { margin: 6px 0 12px; }
+.catalog-card .book-author { font-size: .84rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+.social-link-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; }
+.social-link-grid a { min-height: 50px; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px; border: 1px solid var(--border-color); border-radius: 8px; background: var(--surface-color); text-decoration: none; font-weight: 650; }
+.hero-eyebrow::before { display: none; }
+.hero-banner { box-shadow: none; }
+.book-visual { box-shadow: 4px 8px 16px rgba(0, 0, 0, .16); }
+.book-visual:hover, .book-visual:focus-visible { box-shadow: 5px 10px 18px rgba(0, 0, 0, .18); }
+.offer-card--featured { box-shadow: none !important; }
+.home-section .offer-card,
+.home-section .book-card,
+.home-section .method-card,
+.home-section .problem-card,
+.home-section .evidence-card,
+.home-section .team-card,
+.home-section .module-card { border-radius: 6px; }
+.home-section .book-visual { background: var(--surface-color); }
+.hero-primary, .hero-secondary, .button { min-height: 48px; font-size: 1rem; }
+#hero.hero-section .hero-lede { font-size: 1.08rem; line-height: 1.68; }
+.home-section .offer-price span,
+.home-section .offer-detail-body p,
+.home-section .offer-detail-body li,
+.home-section .offer-detail-body .detail-title,
+.home-section .process-list p:not(.process-time),
+.home-section .before-note p,
+.home-section .problem-card p,
+.home-section .method-card p,
+.home-section .evidence-card p,
+.home-section .team-card p { font-size: 1rem; line-height: 1.68; }
+.home-section .case-metrics span { font-size: .78rem; }
+.home-section .offer-label,
+.home-section .process-time,
+.home-section .book-author { letter-spacing: .07em; }
+.hero-banner, .home-section *, .site-footer * { scroll-margin-top: 94px; }
+.site-footer a:focus-visible, .site-footer button:focus-visible, .page-cta-row a:focus-visible { outline: 3px solid var(--focus-color); outline-offset: 3px; }
+
+@media (max-width: 1080px) {
+  .book-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .campaign-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .social-link-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width: 760px) {
+  :root { --copy-size: 1.04rem; --section-pad: 58px; }
+  body { font-size: 16px; }
+  .home-section p:not(.section-kicker):not(.case-label):not(.proof-overline):not(.proof-type):not(.proof-footnote):not(.case-disclaimer):not(.book-author):not(.book-id):not(.offer-label):not(.offer-book-subtitle):not(.form-help):not(.form-status):not(.footer-youtube) { font-size: 1.04rem; line-height: 1.68; }
+  .home-section .section-heading h2 { font-size: clamp(1.85rem, 7vw, 2.55rem); }
+  .hero-lede { font-size: 1.05rem; }
+  #hero.hero-section .hero-lede { font-size: 1.02rem; }
+  .book-grid, .campaign-grid { grid-template-columns: 1fr; }
+  .book-card { grid-template-columns: minmax(110px, .36fr) minmax(0, .64fr); gap: 18px; padding: 18px; }
+  .book-visual { min-height: 190px; }
+  .book-visual img { max-height: 235px; }
+  .campaign-card { max-width: 580px; margin-inline: auto; }
+  .campaign-heading { grid-template-columns: 1fr; gap: 8px; }
+  .social-directory__groups { grid-template-columns: 1fr; }
+  .learning-poster { grid-template-columns: minmax(100px, .36fr) minmax(0,.64fr); gap: 18px; padding: 18px; }
+  .page-grid, .catalog-grid { grid-template-columns: 1fr; }
+  .catalog-card { grid-template-columns: minmax(105px, .34fr) minmax(0, .66fr); gap: 18px; }
+  .social-link-grid { grid-template-columns: 1fr 1fr; }
+  .page-hero { padding-inline: 20px; }
+  .page-section { padding-inline: 20px; }
+  .page-section p, .page-section li { font-size: 1.02rem; }
+}
+@media (max-width: 430px) {
+  .book-card { grid-template-columns: minmax(94px, .34fr) minmax(0,.66fr); gap: 14px; padding: 14px; }
+  .book-copy h4 { font-size: 1.08rem; }
+  .book-links { display: grid; gap: 4px; }
+  .learning-poster { grid-template-columns: 96px minmax(0,1fr); gap: 14px; }
+  .catalog-card { grid-template-columns: 96px minmax(0,1fr); gap: 14px; padding: 14px; }
+  .social-link-grid { grid-template-columns: 1fr; }
+  .campaign-card { padding: 9px; }
+  .page-hero h1 { font-size: clamp(2.35rem, 11vw, 3.6rem); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .book-visual { transition: none !important; transform: none !important; }
+  .book-visual:hover, .book-visual:focus-visible { transform: none !important; }
+}

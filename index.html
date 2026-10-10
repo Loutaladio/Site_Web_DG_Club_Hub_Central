@@ -1,147 +1,451 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DG Club - Digital Génération</title>
-    <meta name="description" content="DG Club : Communauté tech, tutoriels, livres. Apprends, Construis, Change le monde.">
-    <meta name="keywords" content="DG Club, Digital Génération, tech, tutoriels, livres, programmation, développement, informatique, Danick Arcel Loutaladio, Divine Oubourra">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://dgclub.pro/">
-    <meta property="og:title" content="DG Club - Digital Génération">
-    <meta property="og:description" content="DG Club : Communauté tech, tutoriels, livres. Apprends, Construis, Change le monde.">
-    <meta property="og:image" content="https://dgclubofficiel.vercel.app/Logo_DG_Club_Premium.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#01035D">
+  <script>try{const t=localStorage.getItem('dgclub-theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t}catch{}</script>
+  <title>DG Club — L’académie africaine de l’autorité numérique</title>
+  <meta name="description" content="DG Club accompagne les professionnels francophones en Entity Building SEO et guide la jeunesse africaine vers la maîtrise du numérique. Audit gratuit de 15 minutes.">
+  <meta name="keywords" content="DG Club, Digital Génération, Entity Building SEO, identité numérique, tutoriels, livres, Danick Arcel Loutaladio, Divine Oubourra">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dgclubofficiel.vercel.app/">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="DG Club — L’académie africaine de l’autorité numérique">
+  <meta property="og:description" content="Entity Building SEO pour professionnels francophones ; culture et ressources numériques pour la jeunesse africaine.">
+  <meta property="og:image" content="https://dgclubofficiel.vercel.app/assets/Logo_DG_Club_Premium.png">
+  <meta property="og:image:alt" content="Logo officiel DG Club, Digital Génération">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://dgclubofficiel.vercel.app/">
+  <meta name="twitter:title" content="DG Club — L’académie africaine de l’autorité numérique">
+  <meta name="twitter:description" content="Entity Building SEO pour professionnels francophones ; culture et ressources numériques pour la jeunesse africaine.">
+  <meta name="twitter:image" content="https://dgclubofficiel.vercel.app/assets/Logo_DG_Club_Premium.png">
+  <link rel="canonical" href="https://dgclubofficiel.vercel.app/">
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/brand/dgclub-banner-alpha.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="hero.css">
+  <link rel="stylesheet" href="social-proof-bar.css">
+  <link rel="stylesheet" href="homepage-sections.css">
+  <link rel="stylesheet" href="identity-polish.css">
+  <link rel="icon" type="image/png" href="assets/optimized/logo-favicon-64.png">
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://dgclubofficiel.vercel.app/">
-    <meta property="twitter:title" content="DG Club - Digital Génération">
-    <meta property="twitter:description" content="DG Club : Communauté tech, tutoriels, livres. Apprends, Construis, Change le monde.">
-    <meta property="twitter:image" content="https://dgclubofficiel.vercel.app/Logo_DG_Club_Premium.png">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="assets/IO_DG_Club.png">
-    
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "DG Club",
-      "alternateName": "Digital Génération Club",
-      "url": "https://dgclubofficiel.vercel.app/",
-      "logo": "https://dgclubofficiel.vercel.app/Logo_DG_Club_Premium.png",
-      "description": "Communauté tech, tutoriels, livres. Apprends, Construis, Change le monde.",
-      "founder": [
-        {
-          "@type": "Person",
-          "name": "Danick Arcel Loutaladio",
-          "jobTitle": "Fondateur & Développeur web",
-          "birthDate": "2005-09-10",
-          "description": "Entrepreneur tech, développeur et auteur congolais. Fondateur du DG Club.",
-          "sameAs": [
-            "https://loutaladiodanickarcel.vercel.app/",
-            "https://github.com/Loutaladio",
-            "https://about.me/danickarcelloutaladio"
-          ]
-        },
-        {
-          "@type": "Person",
-          "name": "Divine Oubourra",
-          "jobTitle": "Membre & Technicienne Cybersécurité",
-          "description": "Technicienne spécialisée en systèmes, réseaux et cybersécurité. Co-fondatrice du DG Club.",
-          "sameAs": [
-            "https://oubourragrealafeedivine.netlify.app/",
-            "https://about.me/divineoubourra"
-          ]
-        }
-      ],
-      "knowsAbout": [
-        {
-          "@type": "Book",
-          "name": "Guide Ultime d'Orientation et de Réussite en Génie Informatique",
-          "author": "Danick Arcel Loutaladio",
-          "isbn": "978-2-322-54030-7",
-          "url": "https://play.google.com/store/books/details/Guide_Ultime_d_Orientation_et_de_R%C3%A9ussite_en_G%C3%A9nie?id=-NegEQAAQBAJ",
-          "description": "Le guide complet pour les étudiants en informatique au Congo-Brazzaville."
-        },
-        {
-          "@type": "Book",
-          "name": "Ma Trajectoire Réseau",
-          "author": "Divine Oubourra",
-          "url": "https://www.google.cg/books/edition/Ma_Trajectoire_R%C3%A9seau/7I7OEQAAQBAJ",
-          "description": "Un ouvrage sur le parcours et les compétences en réseaux et cybersécurité."
-        }
-      ]
-    }
-    </script>
+  <!-- Graphe d’entités de la page d’accueil, fondé sur les identifiants publiés et vérifiés. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://dgclubofficiel.vercel.app/#organization",
+        "name": "DG Club",
+        "alternateName": "Digital Génération Club",
+        "url": "https://dgclubofficiel.vercel.app/",
+        "logo": { "@type": "ImageObject", "url": "https://dgclubofficiel.vercel.app/assets/Logo_DG_Club_Premium.png", "width": 500, "height": 500 },
+        "description": "DG Club est une académie numérique indépendante fondée à Pointe-Noire, au Congo-Brazzaville. Elle accompagne les professionnels francophones en Entity Building SEO et en autorité numérique, et guide la jeunesse africaine vers la maîtrise du numérique.",
+        "founder": { "@id": "https://dgclubofficiel.vercel.app/#danick-loutaladio" },
+        "member": { "@id": "https://dgclubofficiel.vercel.app/#divine-oubourra" },
+        "sameAs": ["https://www.youtube.com/@DGClubOfficiel", "https://www.linkedin.com/company/dg-club/", "https://www.facebook.com/profile.php?id=61580465067147&sk=directory_links", "https://www.crunchbase.com/organization/dg-club-a2c3"],
+        "foundingLocation": { "@type": "Place", "name": "Pointe-Noire, Congo-Brazzaville", "address": { "@type": "PostalAddress", "addressLocality": "Pointe-Noire", "addressCountry": "CG" } },
+        "areaServed": ["France", "Canada", "Europe francophone", "Afrique francophone"],
+        "contactPoint": { "@type": "ContactPoint", "telephone": "+24264742678", "contactType": "customer inquiries", "availableLanguage": "French" },
+        "knowsAbout": ["Entity Building SEO", "identité numérique", "données structurées Schema.org", "autorité numérique", "orientation informatique", "Amazon KDP"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://dgclubofficiel.vercel.app/#website",
+        "url": "https://dgclubofficiel.vercel.app/",
+        "name": "DG Club",
+        "inLanguage": "fr-FR",
+        "publisher": { "@id": "https://dgclubofficiel.vercel.app/#organization" }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://dgclubofficiel.vercel.app/#webpage",
+        "url": "https://dgclubofficiel.vercel.app/",
+        "name": "DG Club — L’académie africaine de l’autorité numérique",
+        "inLanguage": "fr-FR",
+        "isPartOf": { "@id": "https://dgclubofficiel.vercel.app/#website" },
+        "about": { "@id": "https://dgclubofficiel.vercel.app/#organization" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://dgclubofficiel.vercel.app/#danick-loutaladio",
+        "name": "LOUTALADIO Danick Arcel",
+        "alternateName": ["Danick Arcel Loutaladio", "Danick Loutaladio"],
+        "jobTitle": "Spécialiste Entity Building SEO, développeur web frontend, auteur et fondateur de DG Club",
+        "description": "LOUTALADIO Danick Arcel est spécialiste en Entity Building SEO, développeur web frontend et auteur congolais. Il a fondé DG Club et accompagne les professionnels dans la structuration de leur présence et de leurs sources numériques.",
+        "url": "https://loutaladiodanickarcel.vercel.app/",
+        "worksFor": { "@id": "https://dgclubofficiel.vercel.app/#organization" },
+        "identifier": { "@type": "PropertyValue", "propertyID": "ISNI", "value": "0000 0005 3163 3051" },
+        "knowsAbout": ["Entity Building SEO", "référencement naturel", "développement web frontend", "HTML", "CSS", "JavaScript", "SQL", "édition Amazon KDP", "orientation informatique", "karaté Kyokushin-Kai"],
+        "sameAs": ["https://loutaladiodanickarcel.vercel.app/", "https://www.linkedin.com/in/danick-arcel-loutaladio-3589ba394", "https://www.youtube.com/@LOUTALADIODanickArcel-j6r", "https://github.com/Loutaladio", "https://about.me/danickarcelloutaladio", "https://www.instagram.com/arcel.372/", "https://x.com/ArcelDanic36328", "https://www.pinterest.com/arcel372/", "https://www.facebook.com/profile.php?id=61575056546876&mibextid=ZbWKwL", "https://filmfreeway.com/DanickArcelLOUTALADIO", "https://www.crunchbase.com/person/danick-arcel-loutaladio", "https://play.google.com/store/books/details/LOUTALADIO_Danick_Arcel_Guide_Ultime_d_Orientation?id=-NegEQAAQBAJ", "https://fr.scribd.com/document/919687037/Guide-Ultime-D-orientation-Et-de-Reussite-en-Genie-Informatique-Au-Congo-Brazzaville", "https://www.lulu.com/spotlight/httpsaboutmedanickarcelloutaladio", "https://www.linkedin.com/newsletters/le-d%C3%A9brief-tech-de-danickos-7428729441029292032"]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://dgclubofficiel.vercel.app/#divine-oubourra",
+        "name": "OUBOURRA Divine",
+        "alternateName": "Divine Oubourra",
+        "jobTitle": "Technicienne systèmes, réseaux et cybersécurité, autrice",
+        "url": "https://oubourragrealafeedivine.netlify.app/",
+        "worksFor": { "@id": "https://dgclubofficiel.vercel.app/#organization" },
+        "sameAs": ["https://oubourragrealafeedivine.netlify.app/", "https://fr.linkedin.com/in/divine-oubourra-2006j", "https://fr.pinterest.com/oubourradivine/"]
+      },
+      {
+        "@type": "Book",
+        "@id": "https://dgclubofficiel.vercel.app/#guide-ultime",
+        "name": "Guide Ultime d’Orientation et de Réussite en Génie Informatique",
+        "author": { "@id": "https://dgclubofficiel.vercel.app/#danick-loutaladio" },
+        "isbn": ["978-2-322-54030-7", "9781257000647"],
+        "url": "https://play.google.com/store/books/details/Guide_Ultime_d_Orientation_et_de_R%C3%A9ussite_en_G%C3%A9nie?id=-NegEQAAQBAJ",
+        "sameAs": ["https://play.google.com/store/books/details/Guide_Ultime_d_Orientation_et_de_R%C3%A9ussite_en_G%C3%A9nie?id=-NegEQAAQBAJ", "https://www.lulu.com/es/shop/bax-alda-and-picka-kelly-dorvely-and-tchiss-sephora/guide-ultime-dorientation-et-de-r%C3%A9ussite-en-g%C3%A9nie-informatique/ebook/product-zmwwe7r.html"],
+        "inLanguage": "fr"
+      },
+      {
+        "@type": "Book",
+        "@id": "https://dgclubofficiel.vercel.app/#ma-trajectoire-reseau",
+        "name": "Ma Trajectoire Réseau : Architecture, Systèmes et Cybersécurité : Carnet d’une expertise en mouvement",
+        "author": { "@id": "https://dgclubofficiel.vercel.app/#divine-oubourra" },
+        "editor": { "@id": "https://dgclubofficiel.vercel.app/#danick-loutaladio" },
+        "isbn": "9798199692625",
+        "identifier": [
+          { "@type": "PropertyValue", "propertyID": "ISBN-13", "value": "9798199692625" },
+          { "@type": "PropertyValue", "propertyID": "ASIN Kindle", "value": "B0H1QP5ZM3" },
+          { "@type": "PropertyValue", "propertyID": "ASIN broché", "value": "B0H467L3H5" }
+        ],
+        "url": "https://books.google.com/books/about/Ma_Trajectoire_R%C3%A9seau.html?id=7I7OEQAAQBAJ",
+        "sameAs": ["https://books.google.com/books/about/Ma_Trajectoire_R%C3%A9seau.html?id=7I7OEQAAQBAJ", "https://www.amazon.com.au/dp/B0H1QP5ZM3", "https://www.amazon.com.au/dp/B0H467L3H5"],
+        "inLanguage": "fr"
+      },
+      {
+        "@type": "Book",
+        "@id": "https://dgclubofficiel.vercel.app/#travailler-sans-frontieres",
+        "name": "Travailler sans frontières",
+        "author": { "@id": "https://dgclubofficiel.vercel.app/#danick-loutaladio" },
+        "url": "https://books.google.com/books/about/TRAVAILLER_SANS_FRONTI%C3%88RES.html?id=b5IPEgAAQBAJ",
+        "inLanguage": "fr"
+      },
+      {
+        "@type": "Book",
+        "@id": "https://dgclubofficiel.vercel.app/#invisible-sur-google",
+        "name": "Invisible sur Google",
+        "author": { "@id": "https://dgclubofficiel.vercel.app/#danick-loutaladio" },
+        "image": "https://dgclubofficiel.vercel.app/assets/optimized/book-invisible-sur-google.webp",
+        "url": "https://dgclubofficiel.vercel.app/#invisible",
+        "inLanguage": "fr",
+        "publisher": { "@id": "https://dgclubofficiel.vercel.app/#organization" }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="assets/dg_clubl_icone_en_32x3.png" alt="DG Club Logo">
-                <span>DG Club</span>
-                <div class="Banderol"><p>Plateforme en Cours de constructions</p><img src="assets/Alert.png" alt="icone alert"></div>
+  <a class="skip-link" href="#main-content">Aller au contenu principal</a>
+  <header>
+    <nav class="site-nav" aria-label="Navigation principale">
+      <a class="site-brand" href="#hero">
+        <img src="assets/optimized/logo-mark-96.webp" alt="" width="42" height="42">
+        <span><strong>DG CLUB</strong><small>Digital Génération</small></span>
+      </a>
+      <button class="theme-toggle" type="button" aria-label="Passer au thème clair" title="Passer au thème clair">
+        <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.8"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg>
+        <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.1A8.6 8.6 0 0 1 8.9 3.8 8.7 8.7 0 1 0 20.2 15.1Z"></path></svg>
+      </button>
+      <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="site-menu"><span></span><span></span></button>
+      <ul class="site-links" id="site-menu">
+        <li><a href="#methode">Méthode</a></li>
+        <li><a href="#resultats">Résultats</a></li>
+        <li><a href="#services">Offres</a></li>
+        <li><a href="#ressources">Ressources</a></li>
+        <li><a href="#histoire">Équipe</a></li>
+        <li><a class="nav-cta" href="#contact">Audit gratuit <span aria-hidden="true">↗</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section id="hero" class="hero-section" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <div class="hero-intro">
+          <div class="hero-copy">
+            <p class="hero-eyebrow">ENTITY BUILDING SEO</p>
+            <h1 id="hero-title">Que voit-on quand on cherche <span>votre nom&nbsp;?</span></h1>
+          </div>
+          <div class="hero-conversion">
+            <p class="hero-lede">DG Club structure vos sources, vos profils et vos preuves pour que Google et vos futurs clients lisent une histoire cohérente de votre expertise.</p>
+            <div class="hero-actions">
+              <a class="hero-primary" href="https://wa.me/24264742678?text=Bonjour%20DG%20Club%2C%20je%20souhaite%20r%C3%A9server%20mon%20audit%20gratuit%20de%2015%20minutes." target="_blank" rel="noopener noreferrer">Réserver mon audit gratuit <span class="arrow" aria-hidden="true">↗</span></a>
+              <a class="hero-secondary" href="#preuves">Voir les preuves <span aria-hidden="true">↓</span></a>
             </div>
-            <ul>
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#communauté">Communauté</a></li>
-                <li><a href="#tutoriels">Tutoriels</a></li>
-                <li><a href="#livres">Livres</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+            <p class="hero-note"><span class="note-dot" aria-hidden="true"></span> 15 minutes · Sans engagement · Diagnostic en direct</p>
+          </div>
+        </div>
+        <div class="proof-heading" id="preuves">
+          <div><p class="proof-overline">LA PREUVE, EN CLAIR</p><h2>Regardez ce que Google trouve.</h2></div>
+          <p>Trois profils, trois recherches Google — visuels affichés sans retouche. Ouvrez une capture pour l’examiner en grand.</p>
+        </div>
+        <div class="proof-grid" aria-label="Captures Google originales de trois profils DG Club">
+          <figure class="proof-card">
+            <div class="proof-card-top"><span class="proof-type">01 · CAS CLIENT</span><span class="proof-signal" aria-hidden="true">●</span></div>
+            <a class="proof-image-link" href="assets/proof-google-ben-riche.png" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir dans un nouvel onglet la capture Google originale de Ben-Riche MOUNTOU"><img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="assets/proof-google-ben-riche.png" alt="Capture Google d’origine montrant les résultats et éléments de présence en ligne pour Ben-Riche MOUNTOU" width="667" height="656" loading="lazy" decoding="async"></a>
+            <figcaption><span><strong>Ben-Riche MOUNTOU</strong><span>Exemple client · aperçu Google</span></span><span class="proof-open" aria-hidden="true">↗</span></figcaption>
+          </figure>
+          <figure class="proof-card">
+            <div class="proof-card-top"><span class="proof-type">02 · FONDATEUR</span><span class="proof-signal" aria-hidden="true">●</span></div>
+            <a class="proof-image-link" href="assets/proofs/proof-google-danick.png" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir dans un nouvel onglet la capture Google originale de LOUTALADIO Danick Arcel"><img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="assets/proofs/proof-google-danick.png" alt="Capture Google d’origine pour LOUTALADIO Danick Arcel montrant des résultats et son Knowledge Panel" width="1366" height="705" loading="lazy" decoding="async"></a>
+            <figcaption><span><strong>LOUTALADIO Danick Arcel</strong><span>Fondateur · Knowledge Panel</span></span><span class="proof-open" aria-hidden="true">↗</span></figcaption>
+          </figure>
+          <figure class="proof-card">
+            <div class="proof-card-top"><span class="proof-type">03 · AUTRICE</span><span class="proof-signal" aria-hidden="true">●</span></div>
+            <a class="proof-image-link" href="assets/proofs/proof-google-divine.png" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir dans un nouvel onglet la capture Google originale de Divine Oubourra"><img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="assets/proofs/proof-google-divine.png" alt="Capture Google d’origine de la recherche Oubourra Divine, avec des résultats de profils et son livre" width="1366" height="768" loading="lazy" decoding="async"></a>
+            <figcaption><span><strong>Divine OUBOURRA</strong><span>Autrice · résultats et profils Google</span></span><span class="proof-open" aria-hidden="true">↗</span></figcaption>
+          </figure>
+        </div>
+        <p class="proof-footnote">Captures présentées à titre d’exemples documentés. Chaque stratégie dépend des sources disponibles et ne garantit pas l’obtention d’un Knowledge Panel.</p>
+      </div>
+    </section>
 
-    <main>
-        <section id="hero">
-            <h1>Apprends, Construis, Change le monde.</h1>
-            <div class="Banderol"></div>
-            <p>Rejoins le DG Club. Apprends à résoudre les défis technologiques et économiques de la sous-région à travers des projets concrets.</p>
-            <button><a href="https://www.youtube.com/@DGClubOfficiel">Devenir Membre de la Chaine</a></button>
-        </section>
+    <section id="social-proof" class="social-proof-bar" aria-labelledby="social-proof-title">
+      <h2 class="social-proof-title" id="social-proof-title">Résultats vérifiables sur <span aria-hidden="true">→</span></h2>
+      <div class="platforms-row">
+        <div class="platforms-viewport">
+          <div class="platforms-track">
+            <ul class="platforms-group"><li>Google Books</li><li>Amazon</li><li>Bol.com</li><li>Orell Füssli</li><li>CeDe.ch</li><li>Wikimedia</li><li>LinkedIn</li></ul>
+            <ul class="platforms-group platforms-group--clone" aria-hidden="true"><li>Google Books</li><li>Amazon</li><li>Bol.com</li><li>Orell Füssli</li><li>CeDe.ch</li><li>Wikimedia</li><li>LinkedIn</li></ul>
+          </div>
+        </div>
+        <button class="platforms-toggle" type="button" data-platforms-toggle aria-label="Défilement automatique des plateformes" aria-pressed="true" title="Mettre en pause le défilement" hidden>
+          <svg class="platforms-toggle__pause" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M8 5v14M16 5v14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+          <svg class="platforms-toggle__play" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="m8 5 11 7-11 7z" fill="currentColor"/></svg>
+        </button>
+      </div>
+    </section>
 
-        <section id="about">
-            <h2>Qui sommes-nous ?</h2>
-            <p>Le DG Club est une plateforme dédiée à l'excellence tech, offrant des ressources éducatives et un soutien communautaire pour les passionnés du numérique.</p>
-        </section>
+    <section id="probleme" class="home-section home-section--problem" aria-labelledby="problem-title">
+      <div class="home-container">
+        <div class="section-heading" data-reveal>
+          <div><p class="section-kicker">LE DÉFI</p><h2 id="problem-title">Une expertise réelle. Une présence qui ne la raconte pas encore.</h2></div>
+          <p class="section-intro">Un client potentiel cherche votre nom, recoupe vos informations et se fait une première opinion. Si vos profils se contredisent ou restent isolés, il doit faire lui-même le lien.</p>
+        </div>
+        <div class="problem-grid">
+          <article class="problem-card problem-card--featured" data-reveal><span class="card-index">01 / VISIBILITÉ</span><h3>Les éléments importants sont dispersés.</h3><p>Votre site, votre bio, vos profils et vos publications ne présentent pas toujours la même identité professionnelle.</p></article>
+          <article class="problem-card" data-reveal><span class="card-index">02 / COHÉRENCE</span><h3>Votre expertise n’est pas évidente au premier regard.</h3><p>Sans sources reliées ni description stable, les moteurs et les prospects ont moins d’indices pour confirmer qui vous êtes.</p></article>
+          <article class="problem-card" data-reveal><span class="card-index">03 / CONFIANCE</span><h3>Le prospect doit encore vérifier.</h3><p>Une présence structurée aide à retrouver les preuves et à comprendre le parcours avant le premier échange.</p></article>
+        </div>
+        <div class="section-bridge" data-reveal><p>Le point de départ n’est pas une promesse de positionnement : c’est une identité vérifiable.</p><a class="text-link" href="#methode">Voir comment nous la construisons <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
 
-        <section id="tutoriels">
-            <h2>Nos Tutoriels</h2>
-            <div class="tutoriel-grid">
-                <!-- Les tutoriels seront ajoutés ici -->
-            </div>
-        </section>
+    <section id="methode" class="home-section home-section--method" aria-labelledby="method-title">
+      <div class="home-container">
+        <div class="section-heading" data-reveal>
+          <div><p class="section-kicker">LA MÉTHODE DG CLUB</p><h2 id="method-title">Relier les preuves. Clarifier l’identité. Consolider la présence.</h2></div>
+          <p class="section-intro">L’Entity Building organise les sources qui parlent de vous afin que votre expertise soit plus facile à comprendre et à vérifier.</p>
+        </div>
+        <div class="authority-formula" role="group" aria-label="Formule pédagogique : sources fiables multipliées par cohérence multipliées par fréquence">
+          <span class="formula-term">Sources fiables</span><span class="formula-operator" aria-hidden="true">×</span><span class="formula-term">Cohérence</span><span class="formula-operator" aria-hidden="true">×</span><span class="formula-term">Fréquence</span>
+        </div>
+        <p class="formula-note">Une grille de travail pédagogique issue du livre DG Club — pas une formule qui garantit une décision de Google.</p>
+        <div class="method-grid">
+          <article class="method-card" data-reveal><span class="method-number">01</span><h3>Un point de référence</h3><p>Définir le nom canonique et l’Entity Home qui décrivent la personne, son activité et ses publications.</p></article>
+          <article class="method-card" data-reveal><span class="method-number">02</span><h3>Des informations alignées</h3><p>Unifier les bios, relier les profils et structurer les relations avec les données Schema.org utiles.</p></article>
+          <article class="method-card" data-reveal><span class="method-number">03</span><h3>Des sources vérifiables</h3><p>Consolider les références, les publications, les identifiants et le suivi d’indexation disponibles pour chaque projet.</p></article>
+        </div>
+        <p class="honesty-note">DG Club peut structurer et documenter les actions. Google choisit seul ce qu’il indexe, la manière dont il l’affiche et l’apparition éventuelle d’un Knowledge Panel.</p>
+      </div>
+    </section>
 
-        <section id="livres">
-            <h2>Nos Livres</h2>
-            <div class="book-grid">
-                <!-- Les livres seront ajoutés ici -->
-            </div>
+    <section id="resultats" class="home-section home-section--results" aria-labelledby="results-title">
+      <div class="home-container">
+        <div class="section-heading" data-reveal>
+          <div><p class="section-kicker">LES PREUVES</p><h2 id="results-title">Des résultats réels. Vérifiables maintenant.</h2></div>
+          <p class="section-intro">Les captures complètes sont des fichiers originaux du projet. Les chiffres ci-dessous viennent du cas documenté de Ben-Riche MOUNTOU ; ils ne constituent pas une promesse pour un autre client.</p>
+        </div>
+        <article class="case-feature" data-reveal>
+          <div class="case-copy">
+            <p class="case-label">CAS CLIENT · BEN-RICHE MOUNTOU</p>
+            <h3>De résultats professionnels difficiles à trouver à une présence reliée.</h3>
+            <p class="case-role">Ingénieur électrotechnicien · Auteur</p>
+            <div class="before-note"><span class="before-tag">AVANT · SELON LE DOSSIER</span><p>La recherche exacte de son nom ne faisait pas ressortir de résultat professionnel relié à ses compétences. Profils, livres et activités n’étaient pas encore structurés en un même écosystème.</p></div>
+            <div class="case-metrics" aria-label="Résultats documentés dans le dossier de cas"><div><strong>8</strong><span>semaines de travail</span></div><div><strong>6+</strong><span>pays de diffusion des livres</span></div><div><strong>170</strong><span>pages Kindle Unlimited lues en deux semaines</span></div></div>
+            <a class="text-link" href="assets/proof-google-ben-riche.png" target="_blank" rel="noopener noreferrer">Ouvrir sa capture Google originale <span aria-hidden="true">↗</span></a>
+          </div>
+          <a class="case-image" href="assets/proof-google-ben-riche.png" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir la capture Google originale de Ben-Riche MOUNTOU en taille réelle"><img src="assets/proof-google-ben-riche.png" alt="Capture Google fournie par DG Club pour Ben-Riche MOUNTOU ; image originale sans retouche" width="667" height="656" loading="lazy" decoding="async"></a>
+        </article>
+        <div class="evidence-grid">
+          <article class="evidence-card" data-reveal><div><p class="case-label">FONDATEUR · RECHERCHE GOOGLE</p><h3>LOUTALADIO Danick Arcel</h3><p>La capture source montre des résultats et un Knowledge Panel. Elle illustre un profil personnel, pas un résultat garanti pour chaque client.</p><a class="text-link" href="assets/proofs/proof-google-danick.png" target="_blank" rel="noopener noreferrer">Voir la capture intégrale <span aria-hidden="true">↗</span></a></div></article>
+          <article class="evidence-card" data-reveal><div><p class="case-label">AUTRICE · RECHERCHE GOOGLE</p><h3>OUBOURRA Divine</h3><p>Les résultats et profils liés à l’autrice sont présentés tels que fournis. Le brief ne renseigne pas de chiffres d’accompagnement propres à ce profil.</p><a class="text-link" href="assets/proofs/proof-google-divine.png" target="_blank" rel="noopener noreferrer">Voir la capture intégrale <span aria-hidden="true">↗</span></a></div></article>
+        </div>
+        <p class="case-disclaimer">Les captures sont des instantanés qui peuvent évoluer. Une apparition, un classement ou un Knowledge Panel ne peut être garanti par DG Club.</p>
+      </div>
+    </section>
 
-            
-        </section>
+    <section id="services" class="home-section home-section--services" aria-labelledby="services-title">
+      <div class="home-container">
+        <div class="section-heading" data-reveal>
+          <div><p class="section-kicker">NOS SERVICES</p><h2 id="services-title">Trois façons de travailler avec DG Club</h2></div>
+          <p class="section-intro">Des montants, modalités et textes repris des offres DG Club. Choisissez l’accompagnement à explorer ; les livrables précis sont cadrés dans le contrat.</p>
+        </div>
+        <div class="offer-grid">
+          <article class="offer-card" data-reveal>
+            <p class="offer-label">OFFRE 01 · ACCOMPAGNEMENT</p>
+            <h3>Pack Identité Numérique &amp; Autorité Google</h3>
+            <p class="offer-promise">En 60 jours, je construis ton écosystème digital complet pour que Google te reconnaisse comme une autorité dans ton domaine.</p>
+            <div class="offer-price"><strong>500 €</strong><span>250 € au démarrage · 250 € à la livraison</span></div>
+            <details class="offer-details"><summary>Voir les livrables et résultats prévus</summary><div class="offer-detail-body"><p class="detail-title">Ce que tu reçois concrètement :</p><ul><li>1ère page Google saturée avec tes profils officiels</li><li>Code JSON-LD déployé sur ton site — Google lit ton identité directement</li><li>Bio canonique identique sur toutes tes plateformes</li><li>Google Search Console configuré et indexation demandée</li><li>Rapport de suivi mensuel pendant 3 mois</li></ul><p class="detail-title">Résultats visibles dès la semaine 3 :</p><ul><li>Ton nom apparaît sur LinkedIn, YouTube, About.me, ton site en 1ère page</li><li>L’Aperçu IA de Google affiche ta description</li><li>Tes livres ou publications liés à ton profil auteur</li></ul></div></details>
+            <a class="button button--primary offer-action" href="https://wa.me/24264742678?text=Bonjour%20DG%20Club%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20le%20Pack%20Identit%C3%A9%20Num%C3%A9rique%20%26%20Autorit%C3%A9%20Google." target="_blank" rel="noopener noreferrer">Demander les détails <span aria-hidden="true">↗</span></a>
+            <figure class="campaign-card"><a href="assets/campaign/offer-entity-building-source.webp" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir l’affiche fournie du Pack Identité Numérique"><img src="assets/campaign/offer-entity-building-source.webp" alt="Affiche source du Pack Identité Numérique et Entity Building SEO, avec visuels fournis par DG Club" width="1152" height="2048" loading="lazy" decoding="async"></a><figcaption>Affiche DG Club — Pack Identité Numérique</figcaption></figure>
+          </article>
+          <article class="offer-card offer-card--featured" data-reveal>
+            <p class="offer-label">OFFRE 02 · ACCOMPAGNEMENT COMPLET</p>
+            <h3>Pack « Knowledge Panel &amp; Autorité d’Auteur »</h3>
+            <p class="offer-promise">Tout ce qui est dans l’Offre 1 inclus : site personnel, JSON-LD, maillage des profils, Search Console.</p>
+            <div class="offer-price"><strong>1&nbsp;000 €</strong><span>500 € au démarrage · 500 € à la livraison</span></div>
+            <details class="offer-details"><summary>Voir les livrables et résultats prévus</summary><div class="offer-detail-body"><p class="detail-title">Partie 1 — L’écosystème digital complet</p><p>Tout ce qui est dans l’Offre 1 inclus : site personnel, JSON-LD, maillage des profils, Search Console.</p><p class="detail-title">Partie 2 — La publication du livre ou guide</p><p>Je rédige avec toi un guide professionnel de 50 à 80 pages sur ton expertise. Conception, mise en page professionnelle, couverture. Publication sur Amazon KDP + Google Books avec ISBN officiel. Création du profil Amazon Author Central. Distribution automatique dans 10+ pays.</p><p class="detail-title">Partie 3 — L’entité Google</p><p>Création de la fiche Wikidata avec tes livres comme preuve de notoriété. Soumission sur EverybodyWiki. Configuration complète pour déclencher la reconnaissance Google.</p><p class="detail-title">Résultat indiqué dans l’offre</p><p>« Quand on tape ton nom sur Google → ta photo, ta description, tes livres et tes profils officiels apparaissent. Tu es reconnu comme l’autorité de ta niche. »</p><p>Délai : 60 à 90 jours. Paiement : 500 € au démarrage + 500 € à la livraison.</p></div></details>
+            <a class="button button--primary offer-action" href="https://wa.me/24264742678?text=Bonjour%20DG%20Club%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20le%20Pack%20Knowledge%20Panel%20%26%20Autorit%C3%A9%20d%E2%80%99Auteur." target="_blank" rel="noopener noreferrer">Demander les détails <span aria-hidden="true">↗</span></a>
+            <figure class="campaign-card"><a href="assets/campaign/offer-knowledge-panel-source.webp" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir l’affiche fournie du Pack Knowledge Panel"><img src="assets/campaign/offer-knowledge-panel-source.webp" alt="Affiche source du Pack Knowledge Panel et Autorité d’Auteur, avec visuels fournis par DG Club" width="1152" height="2048" loading="lazy" decoding="async"></a><figcaption>Affiche DG Club — Pack Knowledge Panel</figcaption></figure>
+          </article>
+          <article class="offer-card offer-card--book" data-reveal>
+            <p class="offer-label">PRÉCOMMANDE · LIVRE</p>
+            <h3>Invisible sur Google</h3>
+            <p class="offer-book-subtitle">Le livre — toute la méthode</p>
+            <div class="book-teaser"><span class="teaser-index">20</span><span>chapitres</span><span class="teaser-separator" aria-hidden="true">/</span><span>cas réels documentés</span></div>
+            <div class="offer-price"><strong>30 €</strong><span>Version numérique PDF + Kindle</span></div>
+            <p class="offer-book-note">Procédures étape par étape. Précommande à confirmer directement auprès de DG Club.</p>
+            <a class="button button--outline offer-action" href="https://wa.me/24264742678?text=Bonjour%20DG%20Club%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20la%20pr%C3%A9commande%20du%20livre%20Invisible%20sur%20Google." target="_blank" rel="noopener noreferrer">Se renseigner sur la précommande <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+        <p class="offer-disclaimer">Les textes ci-dessus reprennent les offres DG Club. Les moteurs restent seuls responsables de l’indexation, des positions et de l’affichage éventuel d’un Knowledge Panel. Les livrables et échéances doivent figurer au contrat fourni avant paiement.</p>
+      </div>
+    </section>
 
-        <section id="contact">
-            <h2>Contactez-nous</h2>
-            <p>Des questions ? Envie de collaborer ? Contactez-nous !</p>
-            <!-- <form>
-                <input type="text" placeholder="Votre Nom">
-                <input type="email" placeholder="Votre Email">
-                <textarea placeholder="Votre Message"></textarea>
-                <button type="submit">Envoyer</button>
-            </form> -->
-<br><br>
-            <h3>WhatsApp: +242 06474 26 78 | Email: danickarcel@gmail.com</h3>
-        </section>
-    </main>
+    <section id="parcours" class="home-section home-section--process" aria-labelledby="process-title">
+      <div class="home-container">
+        <div class="section-heading" data-reveal><div><p class="section-kicker">COMMENT ÇA MARCHE</p><h2 id="process-title">Cinq phases. Un travail documenté à chaque étape.</h2></div><p class="section-intro">Le déroulé s’adapte aux sources, aux plateformes et à l’offre retenue. Les semaines indiquées sont celles du brief DG Club.</p></div>
+        <ol class="process-list">
+          <li data-reveal><span class="process-count">01</span><div><p class="process-time">SEMAINE 1 · AUDIT</p><h3>Comprendre le point de départ</h3><p>Analyse complète de la présence Google actuelle. Rapport détaillé des opportunités et des manques.</p></div></li>
+          <li data-reveal><span class="process-count">02</span><div><p class="process-time">SEMAINE 1–2 · FONDATIONS</p><h3>Installer votre base numérique</h3><p>Site personnel optimisé. JSON-LD et configuration de Search Console selon le périmètre convenu.</p></div></li>
+          <li data-reveal><span class="process-count">03</span><div><p class="process-time">SEMAINE 2–3 · ÉCOSYSTÈME</p><h3>Aligner les profils</h3><p>Bio canonique identique partout. Maillage bidirectionnel des profils retenus.</p></div></li>
+          <li data-reveal><span class="process-count">04</span><div><p class="process-time">SEMAINE 3–5 · SOURCES</p><h3>Consolider les références</h3><p>Publication d’un livre avec ISBN et constitution des sources d’auteur envisagées dans l’offre.</p></div></li>
+          <li data-reveal><span class="process-count">05</span><div><p class="process-time">SEMAINE 5–8 · SUIVI</p><h3>Vérifier et documenter</h3><p>Monitoring, indexation et suivi des demandes disponibles. Les délais de Google peuvent dépasser ceux du travail livré.</p></div></li>
+        </ol>
+        <p class="honesty-note">Le calendrier décrit les phases du projet ; il ne garantit ni l’indexation par Google ni l’apparition d’un Knowledge Panel.</p>
+      </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2026 DG Club. Tous droits réservés.</p>
-    </footer>
+    <section id="ressources" class="home-section home-section--resources" aria-labelledby="resources-title">
+      <div class="home-container">
+        <div class="section-heading" data-reveal><div><p class="section-kicker">APPRENDRE · CONSTRUIRE · PARTAGER</p><h2 id="resources-title">Des ressources pour passer de la théorie à la pratique.</h2></div><p class="section-intro">Ouvrages publiés, plan de formation et contenus pédagogiques DG Club — sans visuels génériques.</p></div>
+        <div id="livres" class="resource-block" aria-labelledby="books-title">
+          <div class="resource-heading" data-reveal><div><p class="section-kicker">LES LIVRES</p><h3 id="books-title">Des idées à garder près de soi.</h3></div><p>Ouvrez les fiches éditeur pour consulter les formats et disponibilités.</p></div>
+          <div class="book-grid">
+            <article class="book-card book-card--feature" data-reveal id="invisible">
+              <a class="book-visual" href="#invisible" aria-label="Revenir à la fiche du livre Invisible sur Google"><img src="assets/optimized/book-invisible-sur-google.webp" alt="Couverture source du livre Invisible sur Google de LOUTALADIO Danick Arcel" width="900" height="1350" loading="lazy" decoding="async"></a>
+              <div class="book-copy"><p class="book-author">LOUTALADIO Danick Arcel · Précommande</p><h4>Invisible sur Google</h4><p>La méthode DG Club d’Entity Building SEO, présentée en 20 chapitres avec des cas documentés.</p><p class="book-id">Version numérique PDF + Kindle · 30 €</p><div class="book-links"><a href="https://wa.me/24264742678?text=Bonjour%20DG%20Club%2C%20je%20souhaite%20me%20renseigner%20sur%20la%20pr%C3%A9commande%20du%20livre%20Invisible%20sur%20Google." target="_blank" rel="noopener noreferrer">Demander la précommande ↗</a></div></div>
+            </article>
+            <article class="book-card" data-reveal>
+              <a class="book-visual" href="https://play.google.com/store/books/details/Guide_Ultime_d_Orientation_et_de_R%C3%A9ussite_en_G%C3%A9nie?id=-NegEQAAQBAJ" target="_blank" rel="noopener noreferrer" aria-label="Consulter le Guide Ultime sur Google Play Books"><img src="assets/optimized/book-guide-ultime.webp" alt="Couverture du Guide Ultime d’Orientation et de Réussite en Génie Informatique" width="512" height="800" loading="lazy" decoding="async"></a>
+              <div class="book-copy"><p class="book-author">LOUTALADIO Danick Arcel</p><h4>Guide Ultime d’Orientation et de Réussite en Génie Informatique</h4><p>Un guide d’orientation et de réussite consacré au génie informatique.</p><p class="book-id">ISBN-13 · 978-2-322-54030-7</p><div class="book-links"><a href="https://play.google.com/store/books/details/Guide_Ultime_d_Orientation_et_de_R%C3%A9ussite_en_G%C3%A9nie?id=-NegEQAAQBAJ" target="_blank" rel="noopener noreferrer">Google Play Books ↗</a><a href="https://www.lulu.com/es/shop/bax-alda-and-picka-kelly-dorvely-and-tchiss-sephora/guide-ultime-dorientation-et-de-r%C3%A9ussite-en-g%C3%A9nie-informatique/ebook/product-zmwwe7r.html" target="_blank" rel="noopener noreferrer">Lulu ↗</a></div></div>
+            </article>
+            <article class="book-card" data-reveal>
+              <a class="book-visual" href="https://books.google.com/books/about/Ma_Trajectoire_R%C3%A9seau.html?id=7I7OEQAAQBAJ" target="_blank" rel="noopener noreferrer" aria-label="Consulter Ma Trajectoire Réseau sur Google Books"><img src="assets/optimized/book-ma-trajectoire-reseau.webp" alt="Couverture du livre Ma Trajectoire Réseau de Divine Oubourra" width="900" height="1350" loading="lazy" decoding="async"></a>
+              <div class="book-copy"><p class="book-author">OUBOURRA Divine</p><h4>Ma Trajectoire Réseau</h4><p>Architecture, systèmes et cybersécurité : carnet d’une expertise en mouvement.</p><p class="book-id">ISBN-13 · 979-8-19969-262-5</p><div class="book-links"><a href="https://books.google.com/books/about/Ma_Trajectoire_R%C3%A9seau.html?id=7I7OEQAAQBAJ" target="_blank" rel="noopener noreferrer">Google Books ↗</a><a href="https://www.amazon.com.au/dp/B0H467L3H5" target="_blank" rel="noopener noreferrer">Amazon · broché ↗</a></div></div>
+            </article>
+            <article class="book-card" data-reveal>
+              <a class="book-visual" href="https://books.google.com/books/about/TRAVAILLER_SANS_FRONTI%C3%88RES.html?id=b5IPEgAAQBAJ" target="_blank" rel="noopener noreferrer" aria-label="Consulter le livre Travailler sans frontières sur Google Books"><img src="assets/optimized/book-travailler-sans-frontieres.webp" alt="Couverture originale du livre Travailler sans frontières de LOUTALADIO Danick Arcel" width="900" height="1350" loading="lazy" decoding="async"></a>
+              <div class="book-copy"><p class="book-author">LOUTALADIO Danick Arcel</p><h4>Travailler sans frontières</h4><p>Un ouvrage sur les possibilités du travail au-delà des frontières.</p><div class="book-links"><a href="https://books.google.com/books/about/TRAVAILLER_SANS_FRONTI%C3%88RES.html?id=b5IPEgAAQBAJ" target="_blank" rel="noopener noreferrer">Google Books ↗</a></div></div>
+            </article>
+          </div>
+        </div>
+        <div id="tutoriels" class="learning-panel" aria-labelledby="learning-title">
+          <div class="learning-intro" data-reveal><p class="section-kicker">LA FORMATION VIDÉO</p><h3 id="learning-title">Comprendre, construire, déclencher, monétiser.</h3><p>Un parcours modulaire pour les professionnels et les personnes qui veulent mettre en œuvre leur propre stratégie.</p><a class="button button--primary" href="https://www.youtube.com/@DGClubOfficiel" target="_blank" rel="noopener noreferrer">Explorer la chaîne DG Club <span aria-hidden="true">↗</span></a></div>
+          <div class="module-grid">
+            <article class="module-card" data-reveal><span>01</span><h4>Comprendre</h4><p>3 vidéos · le système, l’analyse et la formule de l’autorité.</p></article>
+            <article class="module-card" data-reveal><span>02</span><h4>Construire</h4><p>6 vidéos · identité, site, JSON-LD, profils et Search Console.</p></article>
+            <article class="module-card" data-reveal><span>03</span><h4>Déclencher</h4><p>4 vidéos · Wikidata, sources, revendication et suivi.</p></article>
+            <article class="module-card" data-reveal><span>04</span><h4>Monétiser</h4><p>3 vidéos · offre, conversion et livraison d’un projet.</p></article>
+          </div>
+          <article class="learning-poster" data-reveal>
+            <a href="assets/optimized/course-amazon-kdp.webp" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir le visuel de la formation Amazon KDP"><img src="assets/optimized/course-amazon-kdp.webp" alt="Visuel fourni pour la formation premium Devenir auteur-entrepreneur sur Amazon KDP" width="650" height="975" loading="lazy" decoding="async"></a>
+            <div><p class="section-kicker">AUTRE PARCOURS · AMAZON KDP</p><h4>Publier un livre depuis l’Afrique.</h4><p>Formation dédiée à l’édition et à la publication sur Amazon KDP, avec les ressources fournies par DG Club.</p><a class="button button--outline" href="https://www.youtube.com/@DGClubOfficiel" target="_blank" rel="noopener noreferrer">Voir les contenus DG Club ↗</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <section id="histoire" class="home-section home-section--team" aria-labelledby="team-title">
+      <div class="home-container">
+        <div class="section-heading" data-reveal><div><p class="section-kicker">L’ÉQUIPE DG CLUB</p><h2 id="team-title">Une expertise pensée pour être utile, pas seulement visible.</h2></div><p class="section-intro">Deux profils complémentaires, une même exigence : rendre les compétences et les sources plus faciles à comprendre.</p></div>
+        <div class="team-grid">
+          <article class="team-card" data-reveal><img src="assets/optimized/founder-danick.webp" alt="Portrait de LOUTALADIO Danick Arcel" width="720" height="720" loading="lazy" decoding="async"><div><p class="case-label">FONDATEUR · ENTITY BUILDING SEO</p><h3>LOUTALADIO Danick Arcel</h3><p>« J’ai appris à coder sur un smartphone à l’écran abîmé, sans ordinateur ni mentor. Aujourd’hui, je transforme cette expérience en méthode de travail structurée et documentée. »</p><a class="text-link" href="https://loutaladiodanickarcel.vercel.app/" target="_blank" rel="noopener noreferrer">Voir le portfolio <span aria-hidden="true">↗</span></a></div></article>
+          <article class="team-card" data-reveal><img src="assets/optimized/founder-divine.webp" alt="Portrait d’OUBOURRA Divine" width="485" height="513" loading="lazy" decoding="async"><div><p class="case-label">AUTRICE · SYSTÈMES, RÉSEAUX &amp; CYBERSÉCURITÉ</p><h3>OUBOURRA Divine</h3><p>Autrice de <em>Ma Trajectoire Réseau</em>, elle documente les parcours et les savoir-faire en architecture réseau, systèmes et cybersécurité.</p><a class="text-link" href="https://oubourragrealafeedivine.netlify.app/" target="_blank" rel="noopener noreferrer">Découvrir son profil <span aria-hidden="true">↗</span></a></div></article>
+        </div>
+        <div class="mission-line" data-reveal><span>LA MISSION</span><p>Accompagner les professionnels francophones dans la construction d’une présence numérique cohérente, et guider la jeunesse africaine vers la maîtrise du numérique.</p></div>
+      </div>
+    </section>
+
+    <section id="faq" class="home-section home-section--faq" aria-labelledby="faq-title">
+      <div class="home-container faq-container">
+        <div class="section-heading" data-reveal><div><p class="section-kicker">QUESTIONS FRÉQUENTES</p><h2 id="faq-title">Des réponses claires avant de vous engager.</h2></div><p class="section-intro">La méthode se planifie. La décision finale d’affichage appartient toujours aux moteurs de recherche.</p></div>
+        <div class="faq-list">
+          <details data-reveal><summary>C’est quoi exactement un Knowledge Panel Google&nbsp;?</summary><p>C’est un encadré d’informations que Google peut afficher lorsqu’il estime avoir identifié une personne, une organisation ou un autre sujet. Ce n’est ni un badge acheté ni un résultat que DG Club peut créer dans Google à sa place.</p></details>
+          <details data-reveal><summary>Est-ce que la méthode marche pour tout le monde&nbsp;?</summary><p>Non. Les résultats dépendent notamment des sources disponibles, de leur fiabilité, de la cohérence des profils et des systèmes de Google. L’audit sert à évaluer la situation avant de proposer un plan réaliste.</p></details>
+          <details data-reveal><summary>Combien de temps avant de voir des résultats&nbsp;?</summary><p>Les offres décrivent des échéances de 60 jours ou de 60 à 90 jours. Une indexation, un classement ou l’apparition d’un panneau peut prendre plus longtemps et demeure à la décision de Google.</p></details>
+          <details data-reveal><summary>Je ne suis pas célèbre — est-ce utile pour moi&nbsp;?</summary><p>La démarche vise la clarté et la vérifiabilité d’une identité professionnelle, pas la célébrité. Elle est à envisager si vous disposez de références réelles que l’on peut structurer ; elle ne garantit pas un Knowledge Panel.</p></details>
+          <details data-reveal><summary>Comment se passe le paiement depuis l’étranger&nbsp;?</summary><p>Le brief mentionne Wise, WorldFirst et le virement SEPA. Les moyens disponibles pour votre pays et les échéances exactes sont confirmés dans le devis et le contrat avant tout paiement.</p></details>
+          <details data-reveal><summary>Que se passe-t-il si le Knowledge Panel n’apparaît pas&nbsp;?</summary><p>Les livrables convenus — par exemple le site, les données structurées et les profils — restent distingués d’un affichage contrôlé par Google. Aucun Knowledge Panel n’est promis ; le contrat doit préciser le périmètre et les étapes suivies.</p></details>
+          <details data-reveal><summary>Puis-je voir le contrat avant de payer&nbsp;?</summary><p>Oui. Le contrat de prestation est communiqué avant tout paiement afin de vérifier les livrables, les étapes, le calendrier et les modalités de règlement.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="home-section home-section--contact" aria-labelledby="contact-title">
+      <div class="home-container contact-layout">
+        <div class="contact-copy" data-reveal>
+          <p class="section-kicker">LE PREMIER PAS</p>
+          <h2 id="contact-title">Avant un devis, faisons le point sur votre présence.</h2>
+          <p class="section-intro">Audit gratuit de 15 minutes. Sans engagement. Sans jargon. Repartez avec un premier regard clair sur les preuves à renforcer.</p>
+          <div class="contact-points"><p><strong>15 min</strong><span>pour cadrer votre objectif</span></p><p><strong>0 engagement</strong><span>vous décidez ensuite</span></p><p><strong>Un contrat</strong><span>avant tout paiement</span></p></div>
+          <div class="contact-direct"><a href="https://wa.me/24264742678?text=Bonjour%20DG%20Club%2C%20je%20souhaite%20r%C3%A9server%20mon%20audit%20gratuit%20de%2015%20minutes." target="_blank" rel="noopener noreferrer">WhatsApp · +242 06474 26 78 ↗</a><a href="mailto:danickarcel@gmail.com">danickarcel@gmail.com</a></div>
+        </div>
+        <form class="contact-form" data-contact-form data-reveal>
+          <div class="form-heading"><p class="section-kicker">VOTRE SITUATION</p><h3>Parlons de votre objectif.</h3></div>
+          <label for="contact-name">Nom complet</label><input id="contact-name" name="name" autocomplete="name" required>
+          <div class="field-row"><div><label for="contact-email">E-mail</label><input id="contact-email" type="email" name="email" autocomplete="email" required></div><div><label for="contact-whatsapp">WhatsApp</label><input id="contact-whatsapp" type="tel" name="whatsapp" autocomplete="tel"></div></div>
+          <label for="contact-situation">Décrivez votre situation en deux lignes</label><textarea id="contact-situation" name="situation" rows="4" minlength="12" maxlength="1200" required></textarea>
+          <fieldset><legend>Quelle offre vous intéresse&nbsp;?</legend><div class="offer-choices"><label><input type="checkbox" name="offre" value="Pack Identité Numérique & Autorité Google"> Pack Identité Numérique</label><label><input type="checkbox" name="offre" value="Pack Knowledge Panel & Autorité d’Auteur"> Pack Knowledge Panel</label><label><input type="checkbox" name="offre" value="Invisible sur Google"> Livre « Invisible sur Google »</label></div></fieldset>
+          <label class="consent-line"><input type="checkbox" name="consentement" value="oui" required><span>J’accepte que mes coordonnées soient utilisées pour répondre à cette demande.</span></label>
+          <button class="button button--primary form-submit" type="submit">Préparer ma demande <span aria-hidden="true">↗</span></button>
+          <p class="form-help">Votre message reste éditable et ne sera envoyé qu’après confirmation dans WhatsApp.</p>
+          <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="home-container footer-grid">
+      <div class="footer-brand"><a href="#hero"><img src="assets/optimized/logo-mark-96.webp" alt="" width="44" height="44"><span><strong>DG CLUB</strong><small>DIGITAL GÉNÉRATION</small></span></a><p>Apprends, construis, change le monde.</p><a class="footer-youtube" href="https://www.youtube.com/@DGClubOfficiel" target="_blank" rel="noopener noreferrer">YouTube · DG Club ↗</a></div>
+      <div class="footer-column"><h2>Explorer</h2><a href="#methode">La méthode sur cette page</a><a href="/methode/">La méthode complète</a><a href="#resultats">Résultats</a><a href="/resultats/">Cas documentés</a><a href="#parcours">Parcours</a></div>
+      <div class="footer-column"><h2>Ressources</h2><a href="#livres">Les livres</a><a href="/livre/">Catalogue des livres</a><a href="/services/">Services et tarifs</a><a href="#tutoriels">Formation vidéo</a><a href="/a-propos/">À propos de DG Club</a><a href="#faq">Questions fréquentes</a></div>
+      <div class="footer-column"><h2>Contact</h2><a href="#contact">Réserver un audit</a><a href="https://wa.me/24264742678" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a><a href="mailto:danickarcel@gmail.com">E-mail ↗</a></div>
+    </div>
+    <nav class="home-container social-directory" aria-label="Profils officiels et réseaux sociaux">
+      <h2>Retrouver DG Club et son fondateur</h2>
+      <div class="social-directory__groups">
+        <div><h3>DG Club</h3><a href="https://www.youtube.com/@DGClubOfficiel" target="_blank" rel="noopener noreferrer">YouTube</a><a href="https://www.linkedin.com/company/dg-club/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://www.linkedin.com/newsletters/le-d%C3%A9brief-tech-de-danickos-7428729441029292032" target="_blank" rel="noopener noreferrer">Newsletter LinkedIn</a><a href="https://www.facebook.com/profile.php?id=61580465067147&amp;sk=directory_links" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://www.crunchbase.com/organization/dg-club-a2c3" target="_blank" rel="noopener noreferrer">Crunchbase</a><a href="https://dgclubofficiel.vercel.app/">Site officiel</a></div>
+        <div><h3>LOUTALADIO Danick Arcel</h3><a href="https://loutaladiodanickarcel.vercel.app/" target="_blank" rel="noopener noreferrer">Site personnel</a><a href="https://www.youtube.com/@LOUTALADIODanickArcel-j6r" target="_blank" rel="noopener noreferrer">YouTube</a><a href="https://www.linkedin.com/in/danick-arcel-loutaladio-3589ba394" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://www.crunchbase.com/person/danick-arcel-loutaladio" target="_blank" rel="noopener noreferrer">Crunchbase</a><a href="https://github.com/Loutaladio" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://about.me/danickarcelloutaladio" target="_blank" rel="noopener noreferrer">About.me</a><a href="https://www.instagram.com/arcel.372/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://x.com/ArcelDanic36328" target="_blank" rel="noopener noreferrer">X / Twitter</a><a href="https://www.pinterest.com/arcel372/" target="_blank" rel="noopener noreferrer">Pinterest</a><a href="https://www.facebook.com/profile.php?id=61575056546876&amp;mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://filmfreeway.com/DanickArcelLOUTALADIO" target="_blank" rel="noopener noreferrer">FilmFreeway</a><a href="https://play.google.com/store/books/details/LOUTALADIO_Danick_Arcel_Guide_Ultime_d_Orientation?id=-NegEQAAQBAJ" target="_blank" rel="noopener noreferrer">Google Play Books</a><a href="https://fr.scribd.com/document/919687037/Guide-Ultime-D-orientation-Et-de-Reussite-en-Genie-Informatique-Au-Congo-Brazzaville" target="_blank" rel="noopener noreferrer">Scribd</a><a href="https://www.lulu.com/spotlight/httpsaboutmedanickarcelloutaladio" target="_blank" rel="noopener noreferrer">Lulu</a></div>
+        <div><h3>OUBOURRA Divine</h3><a href="https://oubourragrealafeedivine.netlify.app/" target="_blank" rel="noopener noreferrer">Site personnel</a><a href="https://fr.linkedin.com/in/divine-oubourra-2006j" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://fr.pinterest.com/oubourradivine/" target="_blank" rel="noopener noreferrer">Pinterest</a></div>
+      </div>
+    </nav>
+    <div class="home-container footer-bottom"><p>© <span data-current-year>2026</span> DG Club — Digital Génération. Tous droits réservés.</p><details class="privacy-note" id="confidentialite"><summary>Informations sur les données</summary><p>Les informations saisies servent à répondre à votre demande. Sans endpoint de formulaire configuré, elles sont seulement ajoutées à un brouillon WhatsApp et ne partent qu’après votre validation dans WhatsApp. Aucun script Google Analytics ne se charge sans identifiant configuré et consentement.</p></details><button type="button" class="consent-settings" data-open-consent hidden>Préférences analytiques</button></div>
+  </footer>
+  <aside class="consent-banner" data-analytics-consent hidden aria-labelledby="consent-title"><div><h2 id="consent-title">Vos préférences</h2><p>DG Club peut mesurer l’audience avec Google Analytics si vous l’acceptez. Aucun script analytique ne se charge avant votre choix.</p></div><div class="consent-actions"><button class="button button--outline" type="button" data-consent-reject>Refuser</button><button class="button button--primary" type="button" data-consent-accept>Accepter</button></div></aside>
+  <script src="site-config.js" defer></script>
+  <script src="assets/gsap.min.js" defer></script>
+  <script src="hero-motion.js" defer></script>
+  <script src="social-proof-bar.js" defer></script>
+  <script src="homepage-interactions.js" defer></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
