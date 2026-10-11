@@ -221,3 +221,22 @@ body { font-size: 17px; line-height: 1.65; }
   .offer-book-cover { width: 148px; }
   .preorder-book-cover { width: min(62%, 200px); }
 }
+
+
+/* Contact page: form controls are stacked deliberately, including on phones. */
+.page-section .contact-form { display: flex; flex-direction: column; gap: 10px; min-width: 0; margin: 0; padding: clamp(20px, 3vw, 30px); border: 1px solid var(--border-color); border-radius: 14px; background: var(--surface-color); text-align: left; }
+.page-section .contact-form .form-heading { margin-block-end: 4px; }
+.page-section .contact-form .form-heading h2 { margin: 0; font-size: clamp(1.55rem, 3vw, 2rem); line-height: 1.15; }
+.page-section .contact-form > label:not(.consent-line) { display: block; margin-block-start: 3px; color: var(--text-light-color); font-size: .96rem; font-weight: 650; line-height: 1.45; }
+.page-section .contact-form > input:not([type="checkbox"]), .page-section .contact-form > textarea { display: block; box-sizing: border-box; width: 100%; min-height: 48px; margin-block-start: 4px; padding: 12px; border: 1px solid var(--border-color); border-radius: 7px; background: var(--background-color); color: var(--text-color); font: inherit; font-size: 1rem; }
+.page-section .contact-form > textarea { min-height: 120px; resize: vertical; }
+.page-section .contact-form :is(input,textarea):focus-visible { outline: 3px solid var(--focus-color); outline-offset: 2px; }
+.page-section .contact-form > fieldset { box-sizing: border-box; width: 100%; margin: 5px 0; padding: 14px; border: 1px solid var(--border-color); border-radius: 8px; }
+.page-section .contact-form > fieldset legend { padding-inline: 6px; color: var(--text-light-color); font-weight: 680; }
+.page-section .contact-form .offer-choices { display: flex; flex-direction: column; gap: 10px; }
+.page-section .contact-form .offer-choices label, .page-section .contact-form > .consent-line { display: flex; align-items: flex-start; gap: 10px; color: var(--text-dark-color); font-size: .94rem; font-weight: 500; line-height: 1.55; }
+.page-section .contact-form .offer-choices input[type="checkbox"], .page-section .contact-form > .consent-line input[type="checkbox"] { width: 18px; height: 18px; flex: 0 0 18px; margin: 2px 0 0; accent-color: var(--brand-cyan); }
+.page-section .contact-form .form-submit { width: 100%; min-height: 50px; margin-block-start: 4px; }
+.page-section .contact-form .form-help, .page-section .contact-form .form-status { color: var(--text-dark-color); font-size: .84rem; line-height: 1.6; }
+.page-section .contact-form .form-status:empty { display: none; }
+.page-section .page-card p > a:not(.button) { text-decoration: underline; text-decoration-thickness: .07em; text-underline-offset: 4px; }
