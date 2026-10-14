@@ -1,7 +1,7 @@
 /* DG Club — refinements: typographic scale, supplied campaign assets and real profile links. */
 :root {
-  --copy-size: 1.08rem;
-  --copy-leading: 1.72;
+  --copy-size: 1.125rem;
+  --copy-leading: 1.75;
   --section-pad: clamp(64px, 8vw, 112px);
   --brand-link-color: var(--link-color);
   --focus-color: var(--brand-cyan);
@@ -9,9 +9,9 @@
 }
 :root[data-theme="light"] { --focus-color: var(--brand-navy); }
 html { scroll-padding-top: 94px; }
-body { font-size: 17px; line-height: 1.65; }
-.site-links a { font-size: .94rem; }
-.site-links .nav-cta { font-size: .94rem; }
+body { font-size: 18px; line-height: 1.68; }
+.site-links a { font-size: 1rem; }
+.site-links .nav-cta { font-size: 1rem; }
 
 /* Readable copy — keep labels quiet, make explanations comfortably legible. */
 .home-section p:not(.section-kicker):not(.case-label):not(.proof-overline):not(.proof-type):not(.proof-footnote):not(.case-disclaimer):not(.book-author):not(.book-id):not(.offer-label):not(.offer-book-subtitle):not(.form-help):not(.form-status):not(.footer-youtube) {
@@ -29,14 +29,14 @@ body { font-size: 17px; line-height: 1.65; }
 .home-section .offer-label,
 .home-section .book-author,
 .home-section .module-card > span,
-.home-section .book-id { font-size: .82rem; line-height: 1.5; }
+.home-section .book-id { font-size: .875rem; line-height: 1.55; }
 .home-section .section-heading h2 { font-size: clamp(2rem, 4vw, 3.35rem); line-height: 1.08; }
 .home-section h3 { line-height: 1.18; }
-.hero-eyebrow { font-size: .84rem; }
+.hero-eyebrow { font-size: .875rem; }
 .hero-lede { font-size: 1.15rem; line-height: 1.68; }
 .hero-primary, .hero-secondary { font-size: 1rem; }
-.hero-note { font-size: .91rem; }
-.proof-heading > p, .proof-footnote { font-size: .94rem; line-height: 1.65; }
+.hero-note { font-size: .95rem; }
+.proof-heading > p, .proof-footnote { font-size: .95rem; line-height: 1.7; }
 .site-nav { min-height: 80px; }
 .theme-toggle, .menu-toggle { min-width: 44px; min-height: 44px; }
 
@@ -100,7 +100,7 @@ body { font-size: 17px; line-height: 1.65; }
 .page-section--surface { background: var(--surface-color); }
 .page-section h2 { margin: 0 0 22px; color: var(--text-color); font-size: clamp(1.85rem, 3.4vw, 3rem); line-height: 1.1; letter-spacing: -.045em; }
 .page-section h3 { color: var(--text-color); font-size: clamp(1.2rem, 2vw, 1.5rem); line-height: 1.25; }
-.page-section p, .page-section li { color: var(--text-muted-color); font-size: 1.08rem; line-height: 1.75; }
+.page-section p, .page-section li { color: var(--text-muted-color); font-size: 1.125rem; line-height: 1.75; }
 .page-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 22px; }
 .page-card { min-width: 0; padding: clamp(22px, 3vw, 32px); border: 1px solid var(--border-color); border-radius: 14px; background: var(--background-color); }
 .page-card img { display: block; width: 100%; max-width: 100%; height: auto; object-fit: contain; }
@@ -151,7 +151,7 @@ body { font-size: 17px; line-height: 1.65; }
 .home-section .method-card p,
 .home-section .evidence-card p,
 .home-section .team-card p { font-size: 1rem; line-height: 1.68; }
-.home-section .case-metrics span { font-size: .78rem; }
+.home-section .case-metrics span { font-size: .875rem; }
 .home-section .offer-label,
 .home-section .process-time,
 .home-section .book-author { letter-spacing: .07em; }
@@ -163,9 +163,9 @@ body { font-size: 17px; line-height: 1.65; }
   .social-link-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
 }
 @media (max-width: 760px) {
-  :root { --copy-size: 1.04rem; --section-pad: 58px; }
-  body { font-size: 16px; }
-  .home-section p:not(.section-kicker):not(.case-label):not(.proof-overline):not(.proof-type):not(.proof-footnote):not(.case-disclaimer):not(.book-author):not(.book-id):not(.offer-label):not(.offer-book-subtitle):not(.form-help):not(.form-status):not(.footer-youtube) { font-size: 1.04rem; line-height: 1.68; }
+  :root { --copy-size: 1.0625rem; --copy-leading: 1.7; --section-pad: 58px; }
+  body { font-size: 17px; }
+  .home-section p:not(.section-kicker):not(.case-label):not(.proof-overline):not(.proof-type):not(.proof-footnote):not(.case-disclaimer):not(.book-author):not(.book-id):not(.offer-label):not(.offer-book-subtitle):not(.form-help):not(.form-status):not(.footer-youtube) { font-size: var(--copy-size); line-height: var(--copy-leading); }
   .home-section .section-heading h2 { font-size: clamp(1.85rem, 7vw, 2.55rem); }
   .hero-lede { font-size: 1.05rem; }
   #hero.hero-section .hero-lede { font-size: 1.02rem; }
@@ -184,7 +184,7 @@ body { font-size: 17px; line-height: 1.65; }
   .social-link-grid { grid-template-columns: 1fr 1fr; }
   .page-hero { padding-inline: 20px; }
   .page-section { padding-inline: 20px; }
-  .page-section p, .page-section li { font-size: 1.02rem; }
+  .page-section p, .page-section li { font-size: var(--copy-size); line-height: 1.7; }
 }
 @media (max-width: 430px) {
   .book-card { grid-template-columns: minmax(0, 1fr); gap: 16px; padding: 20px; }
@@ -206,9 +206,9 @@ body { font-size: 17px; line-height: 1.65; }
 
 
 /* New DG Club source visuals and pre-order trust details */
-.authority-formula-visual { width: min(100%, 920px); margin: 26px auto 30px; }
-.authority-formula-visual img { display: block; width: 100%; height: auto; border-radius: 14px; }
-.authority-formula-visual figcaption { margin-top: 10px; color: var(--text-dark-color); font-size: .78rem; line-height: 1.55; text-align: center; }
+.authority-formula-visual { box-sizing: border-box; width: min(100%, 680px); margin: 26px auto 30px; padding: clamp(12px, 2vw, 18px); border: 1px solid #e7e7e7; border-radius: 18px; background: #fff; box-shadow: 0 14px 34px rgba(0,0,0,.16); }
+.authority-formula-visual img { display: block; width: 100%; height: auto; border-radius: 10px; }
+.authority-formula-visual figcaption { margin-top: 12px; color: #303030; font-size: .9375rem; line-height: 1.6; text-align: center; }
 .authority-formula-visual--page { margin-top: 30px; }
 .offer-book-cover { width: min(100%, 176px); margin: 2px auto 16px; }
 .offer-book-cover img, .preorder-book-cover img { display: block; width: 100%; height: auto; border-radius: 3px; box-shadow: 8px 13px 25px rgba(0,0,0,.24); }
@@ -247,3 +247,33 @@ body { font-size: 17px; line-height: 1.65; }
 /* Compact, readable infographic; the full original opens on click. */
 .process-infographic { width: min(100%, 460px); margin: 24px auto 18px; }
 .process-infographic img { max-height: 575px; }
+
+
+/* Low-vision-friendly reading: comfortable body copy, legible secondary text and controls. */
+.home-section .section-kicker, .home-section .case-label, .home-section .proof-overline,
+.home-section .proof-type, .home-section .offer-label, .home-section .book-author,
+.home-section .book-id, .home-section .module-card > span, .home-section .process-time,
+.home-section .case-metrics span, .page-kicker, .catalog-card .book-author {
+  font-size: .9375rem !important; line-height: 1.5 !important;
+}
+.home-section .book-copy h4 { font-size: 1.25rem; line-height: 1.3; }
+.home-section .book-links a { font-size: 1rem; line-height: 1.5; }
+.formula-note { font-size: 1rem !important; line-height: 1.7 !important; }
+.formula-term { font-size: clamp(1rem, 1.5vw, 1.1rem) !important; }
+#contact.home-section .contact-form label, #contact.home-section .contact-form legend { font-size: .95rem !important; line-height: 1.55; }
+#contact.home-section .contact-form input:not([type="checkbox"]), #contact.home-section .contact-form textarea { min-height: 50px; font-size: 1rem; line-height: 1.5; }
+#contact.home-section .contact-form .offer-choices label, #contact.home-section .contact-form .consent-line { font-size: .95rem !important; line-height: 1.6; }
+#contact.home-section .contact-form .offer-choices input, #contact.home-section .contact-form .consent-line input { width: 18px; height: 18px; flex-basis: 18px; }
+.form-help, .form-status { font-size: .9rem !important; line-height: 1.65 !important; }
+.contact-points strong, .contact-points span, .contact-direct a { font-size: .95rem; line-height: 1.6; }
+.footer-brand > a small { font-size: .9rem; }
+.home-section .footer-brand p, .footer-brand > p { font-size: .95rem !important; line-height: 1.65; }
+.footer-youtube, .footer-column a { font-size: .95rem; line-height: 1.55; }
+.site-footer .footer-column h2 { font-size: .9rem; }
+.footer-bottom > p, .privacy-note > p { font-size: .9rem !important; line-height: 1.65 !important; }
+.privacy-note, .consent-settings, .consent-banner p { font-size: .9rem; line-height: 1.6; }
+@media (max-width: 760px) {
+  .authority-formula-visual { width: min(100%, 680px); margin-block: 22px; padding: 10px; }
+  .authority-formula-visual figcaption { font-size: .9375rem; }
+  .home-section .book-copy h4 { font-size: 1.2rem; }
+}
