@@ -240,3 +240,7 @@ body { font-size: 17px; line-height: 1.65; }
 .page-section .contact-form .form-help, .page-section .contact-form .form-status { color: var(--text-dark-color); font-size: .84rem; line-height: 1.6; }
 .page-section .contact-form .form-status:empty { display: none; }
 .page-section .page-card p > a:not(.button) { text-decoration: underline; text-decoration-thickness: .07em; text-underline-offset: 4px; }
+
+/* Full-size DG Club process infographic, kept separate from individual offer cards. */
+.process-infographic { width: min(100%, 720px); margin: 30px auto; }
+.process-infographic img { max-height: 850px; }
