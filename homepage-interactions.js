@@ -3,12 +3,14 @@
   const waNumber = '24264742678';
   const form = document.querySelector('[data-contact-form]');
   const status = document.querySelector('[data-form-status]');
+  const formHelp = form?.querySelector('[data-form-help]');
   const formEndpoint = typeof config.formspreeEndpoint === 'string' ? config.formspreeEndpoint.trim() : '';
   const formspreeReady = /^https:\/\/formspree\.io\/f\/[a-zA-Z0-9]+$/.test(formEndpoint);
 
   if (form && status) {
     const submit = form.querySelector('[type="submit"]');
     if (formspreeReady && submit) submit.innerHTML = 'Envoyer ma demande <span aria-hidden="true">↗</span>';
+    if (formspreeReady && formHelp) formHelp.textContent = 'En cliquant sur le bouton, votre demande sera transmise à DG Club.';
     form.addEventListener('submit', async event => {
       event.preventDefault();
       status.textContent = '';
@@ -38,11 +40,11 @@
       }
 
       const text = [
-        'Bonjour DG Club, je souhaite réserver mon audit gratuit de 15 minutes.',
+        'Bonjour DG Club, je souhaite demander mon audit gratuit de 15 minutes pour clarifier ma présence en ligne.',
         `Nom : ${name}`,
         `E-mail : ${email}`,
         phone ? `WhatsApp : ${phone}` : '',
-        `Situation : ${situation}`,
+        situation ? `Objectif : ${situation}` : '',
         offers.length ? `Offre(s) : ${offers.join(', ')}` : ''
       ].filter(Boolean).join('\n');
       const url = `https://wa.me/${waNumber}?text=${encodeURIComponent(text)}`;

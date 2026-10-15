@@ -277,3 +277,27 @@ body { font-size: 18px; line-height: 1.68; }
   .authority-formula-visual figcaption { font-size: .9375rem; }
   .home-section .book-copy h4 { font-size: 1.2rem; }
 }
+
+
+/* Conversion clarity and accessibility refinements for the home hero. */
+.site-links .nav-cta { min-height: 48px; }
+.hero-primary { min-height: 56px; }
+.hero-secondary { min-height: 48px; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 5px; }
+.hero-secondary:hover { text-decoration-thickness: 2px; }
+#hero.hero-section .hero-note { max-width: 48ch; font-size: .9rem !important; line-height: 1.6; }
+@media (max-width: 560px) {
+  #hero.hero-section .hero-note { align-items: flex-start; font-size: .875rem !important; }
+  .hero-secondary { justify-content: center; }
+}
+
+.hero-primary__compact { display: none; }
+@media (max-width: 360px) {
+  .hero-primary { gap: 9px; padding-inline: 14px; }
+  .hero-primary__full { display: none; }
+  .hero-primary__compact { display: inline; }
+}
+
+@media (min-width: 561px) and (max-width: 840px) {
+  .proof-heading { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1fr); align-items: start; gap: 24px; }
+  .proof-heading > p { align-self: end; max-width: 39ch; }
+}
