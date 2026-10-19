@@ -1,6 +1,6 @@
 (() => {
   const config = window.DG_CLUB_CONFIG || {};
-  const waNumber = '24264742678';
+  const waNumber = String(config.whatsappNumber || '242064742678').replace(/\D/g, '');
   const form = document.querySelector('[data-contact-form]');
   const status = document.querySelector('[data-form-status]');
   const formHelp = form?.querySelector('[data-form-help]');
