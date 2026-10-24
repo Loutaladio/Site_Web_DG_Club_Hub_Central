@@ -321,3 +321,43 @@
 @media (prefers-reduced-motion: reduce) {
   .home-section *, .site-footer *, .button { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+
+/* Mockups livre fournis : aperçu sobre, fond blanc, images jamais rognées. */
+.book-mockups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  width: 100%;
+  margin: 14px 0 8px;
+}
+.book-mockups figure {
+  min-width: 0;
+  margin: 0;
+  padding: 7px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: #fff;
+}
+.book-mockups img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 1.3;
+  object-fit: contain;
+  background: #fff;
+}
+.book-mockups figcaption {
+  margin-top: 5px;
+  color: #333;
+  font-size: .68rem;
+  font-weight: 650;
+  line-height: 1.4;
+  text-align: center;
+}
+@media (max-width: 620px) {
+  .book-mockups { gap: 6px; }
+  .book-mockups figure { padding: 5px; }
+  .book-mockups figcaption { font-size: .64rem; }
+}
