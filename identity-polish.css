@@ -336,3 +336,10 @@ body { font-size: 18px; line-height: 1.68; }
 .campaign-pricing span { color: var(--text-light-color); font-size: .88rem; }
 .campaign-pricing--featured { border-color: color-mix(in srgb, var(--brand-cyan) 78%, var(--border-color)); }
 @media (max-width: 700px) { .launch-pricing { grid-template-columns: 1fr; } .launch-pricing__audience { padding: 14px 0 0; border-top: 2px solid var(--brand-cyan); border-left: 0; } }
+
+/* Founder bio: make the academic progression visible without turning the profile into a CV dump. */
+.education-timeline { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border-color); }
+.education-timeline ol { display: grid; gap: 12px; margin: 10px 0 0; padding: 0; list-style: none; }
+.education-timeline li { display: grid; gap: 2px; padding-left: 14px; border-left: 2px solid var(--brand-cyan); }
+.education-timeline li strong { color: var(--text-color); font-size: .9rem; }
+.education-timeline li span { color: var(--text-light-color); font-size: .88rem; line-height: 1.5; }
