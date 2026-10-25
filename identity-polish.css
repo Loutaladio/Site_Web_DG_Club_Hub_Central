@@ -42,10 +42,10 @@ body { font-size: 18px; line-height: 1.68; }
 
 /* Supplied book covers stay uncropped and get enough space to read the actual artwork. */
 .book-grid { grid-template-columns: minmax(0, 1fr); width: min(100%, 1080px); margin-inline: auto; gap: 22px; }
-.book-card { min-width: 0; grid-template-columns: minmax(320px, .72fr) minmax(0, 1fr); gap: clamp(22px, 3vw, 36px); align-items: center; padding: clamp(22px, 3vw, 36px); }
-.book-visual { position: relative; display: grid; place-items: center; width: 100%; min-width: 0; min-height: 470px; align-self: center; padding: 12px; perspective: 1200px; transform: perspective(1200px) rotateY(-2deg) rotateZ(-.4deg); border: 1px solid var(--border-color); border-radius: 3px; background: var(--surface-color); box-shadow: 7px 12px 24px rgba(0, 0, 0, .20); transition: transform .2s ease, box-shadow .2s ease; }
+.book-card { min-width: 0; grid-template-columns: minmax(360px, .9fr) minmax(0, 1fr); gap: clamp(24px, 3.5vw, 42px); align-items: center; padding: clamp(24px, 3.5vw, 42px); }
+.book-visual { position: relative; display: grid; place-items: center; width: 100%; min-width: 0; min-height: 520px; align-self: center; padding: 14px; perspective: 1200px; transform: perspective(1200px) rotateY(-2deg) rotateZ(-.4deg); border: 1px solid var(--border-color); border-radius: 3px; background: var(--surface-color); box-shadow: 7px 12px 24px rgba(0, 0, 0, .20); transition: transform .2s ease, box-shadow .2s ease; }
 .book-visual::after { position: absolute; inset: 3px -5px 3px auto; width: 5px; content: ""; border-block: 1px solid var(--border-color); background: linear-gradient(90deg, var(--surface-color), var(--background-color)); }
-.book-visual img { display: block; width: min(100%, 300px); max-height: 450px; object-fit: contain; object-position: center; }
+.book-visual img { display: block; width: min(100%, 350px); max-height: 510px; object-fit: contain; object-position: center; }
 .book-visual:hover, .book-visual:focus-visible { transform: perspective(1200px) rotateY(0) rotateZ(0) translateY(-2px); box-shadow: 9px 15px 27px rgba(0, 0, 0, .24); }
 .book-copy { min-width: 0; }
 .book-copy h4 { font-size: 1.23rem; line-height: 1.24; }
@@ -110,8 +110,8 @@ body { font-size: 18px; line-height: 1.68; }
 .page-cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 25px; }
 .page-cta-row .button { min-height: 48px; font-size: 1rem; }
 .catalog-grid { display: grid; grid-template-columns: minmax(0,1fr); width: min(100%, 1080px); margin-inline: auto; gap: 26px; }
-.catalog-card { display: grid; grid-template-columns: minmax(320px, .72fr) minmax(0, 1fr); align-items: center; gap: clamp(26px, 4vw, 52px); min-width: 0; padding: clamp(24px, 4vw, 44px); border: 1px solid var(--border-color); border-radius: 18px; background: var(--background-color); }
-.catalog-card > img { display: block; width: min(100%, 340px); height: auto; max-height: 510px; margin: 0 auto; object-fit: contain; object-position: center; border-radius: 4px; box-shadow: 8px 13px 25px rgba(0,0,0,.2); }
+.catalog-card { display: grid; grid-template-columns: minmax(360px, .9fr) minmax(0, 1fr); align-items: center; gap: clamp(28px, 4vw, 58px); min-width: 0; padding: clamp(26px, 4vw, 48px); border: 1px solid var(--border-color); border-radius: 18px; background: var(--background-color); }
+.catalog-card > img { display: block; width: min(100%, 390px); height: auto; max-height: 590px; margin: 0 auto; object-fit: contain; object-position: center; border-radius: 4px; box-shadow: 8px 13px 25px rgba(0,0,0,.2); }
 .catalog-card > div { display: flex; flex: 1; flex-direction: column; align-items: flex-start; width: 100%; min-width: 0; }
 .catalog-card h3 { margin: 6px 0 12px; font-size: clamp(1.25rem, 2vw, 1.65rem); line-height: 1.2; overflow-wrap: anywhere; }
 .catalog-card .book-author { margin: 0 0 10px; color: var(--text-dark-color); font-size: .82rem; font-weight: 720; letter-spacing: .05em; line-height: 1.5; text-transform: uppercase; }
@@ -121,7 +121,7 @@ body { font-size: 18px; line-height: 1.68; }
 .catalog-card > div > a { display: inline-flex; align-items: center; min-height: 46px; margin: 8px 0 0; padding: 10px 15px; border: 1px solid var(--border-color); border-radius: 8px; font-weight: 680; line-height: 1.35; text-decoration: none; }
 .catalog-card > div > a:hover { border-color: var(--brand-cyan); text-decoration: underline; text-underline-offset: 3px; }
 #invisible.catalog-card { border-color: color-mix(in srgb, var(--brand-cyan) 55%, var(--border-color)); }
-#invisible.catalog-card > img { width: min(100%, 340px); max-height: 510px; }
+#invisible.catalog-card > img { width: min(100%, 390px); max-height: 590px; }
 #invisible.catalog-card > div > a { justify-content: center; width: 100%; margin-top: auto; background: var(--brand-cyan); border-color: var(--brand-cyan); color: var(--brand-navy); text-align: center; }
 :root[data-theme="light"] #invisible.catalog-card > div > a { color: #01035D; }
 .social-link-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; }
@@ -172,15 +172,15 @@ body { font-size: 18px; line-height: 1.68; }
   .book-grid, .campaign-grid { grid-template-columns: 1fr; }
   .book-grid { grid-template-columns: 1fr; }
   .book-card { grid-template-columns: minmax(0, 1fr); gap: 18px; padding: 24px; }
-  .book-visual { width: min(100%, 300px); min-height: 0; margin-inline: auto; }
-  .book-visual img { width: 100%; max-height: 440px; }
+  .book-visual { width: min(100%, 340px); min-height: 0; margin-inline: auto; }
+  .book-visual img { width: 100%; max-height: 500px; }
   .campaign-card { max-width: 580px; margin-inline: auto; }
   .campaign-heading { grid-template-columns: 1fr; gap: 8px; }
   .social-directory__groups { grid-template-columns: 1fr; }
   .learning-poster { grid-template-columns: minmax(100px, .36fr) minmax(0,.64fr); gap: 18px; padding: 18px; }
   .page-grid, .catalog-grid { grid-template-columns: 1fr; }
   .catalog-card { grid-template-columns: minmax(0, 1fr); gap: 24px; }
-  .catalog-card > img { width: min(100%, 300px); max-height: 450px; }
+  .catalog-card > img { width: min(100%, 320px); max-height: 480px; }
   .social-link-grid { grid-template-columns: 1fr 1fr; }
   .page-hero { padding-inline: 20px; }
   .page-section { padding-inline: 20px; }
@@ -188,13 +188,13 @@ body { font-size: 18px; line-height: 1.68; }
 }
 @media (max-width: 430px) {
   .book-card { grid-template-columns: minmax(0, 1fr); gap: 16px; padding: 20px; }
-  .book-visual { width: min(100%, 260px); min-height: 0; }
-  .book-visual img { max-height: 390px; }
+  .book-visual { width: min(100%, 300px); min-height: 0; }
+  .book-visual img { max-height: 450px; }
   .book-copy h4 { font-size: 1.08rem; }
   .book-links { display: grid; gap: 4px; }
   .learning-poster { grid-template-columns: 96px minmax(0,1fr); gap: 14px; }
   .catalog-card { padding: 20px; }
-  .catalog-card > img { width: min(100%, 270px); max-height: 405px; margin-bottom: 0; }
+  .catalog-card > img { width: min(100%, 290px); max-height: 435px; margin-bottom: 0; }
   .social-link-grid { grid-template-columns: 1fr; }
   .campaign-card { padding: 9px; }
   .page-hero h1 { font-size: clamp(2.35rem, 11vw, 3.6rem); }
@@ -245,8 +245,8 @@ body { font-size: 18px; line-height: 1.68; }
 .page-section .page-card p > a:not(.button) { text-decoration: underline; text-decoration-thickness: .07em; text-underline-offset: 4px; }
 
 /* Compact, readable infographic; the full original opens on click. */
-.process-infographic { width: min(100%, 460px); margin: 24px auto 18px; }
-.process-infographic img { max-height: 575px; }
+.process-infographic { width: min(100%, 380px); margin: 24px auto 18px; }
+.process-infographic img { max-height: 490px; }
 
 
 /* Low-vision-friendly reading: comfortable body copy, legible secondary text and controls. */
@@ -309,3 +309,30 @@ body { font-size: 18px; line-height: 1.68; }
 :root[data-theme="light"] .contact-booking-actions .button--outline { border-color: var(--brand-navy); }
 #hero.hero-section .hero-proof-link { margin: 9px 0 0; color: var(--text-dark-color); font-size: .9rem; line-height: 1.55; }
 #hero.hero-section .hero-proof-link a { color: var(--brand-link-color); text-underline-offset: 4px; }
+
+
+/* Commercial launch pricing: local FCFA prices are explicit and easy to scan. */
+.launch-pricing {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(220px, .8fr);
+  gap: 22px;
+  align-items: center;
+  margin: 22px 0 30px;
+  padding: clamp(20px, 3vw, 30px);
+  border: 1px solid color-mix(in srgb, var(--brand-cyan) 45%, var(--border-color));
+  border-radius: 14px;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--brand-cyan) 10%, var(--background-color)), var(--background-color));
+}
+.launch-pricing h3, .launch-pricing h2 { margin: 0 0 8px; }
+.launch-pricing p { margin: 0; line-height: 1.65; }
+.launch-pricing__eyebrow { margin-bottom: 8px !important; color: var(--brand-cyan); font-size: .78rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.launch-pricing__audience { display: grid; gap: 7px; padding-left: 20px; border-left: 2px solid var(--brand-cyan); color: var(--text-light-color); line-height: 1.55; }
+.launch-pricing__audience strong { color: var(--text-color); }
+.offer-price small { display: block; margin-top: 5px; color: var(--text-light-color); font-size: .82rem; }
+.normal-price { color: var(--text-light-color); }
+.campaign-pricing { display: grid; gap: 4px; margin: 10px 0 20px; padding: 16px 18px; border: 1px solid color-mix(in srgb, var(--brand-cyan) 52%, var(--border-color)); border-radius: 10px; background: color-mix(in srgb, var(--brand-cyan) 8%, var(--background-color)); }
+.campaign-pricing p { margin: 0; color: var(--brand-cyan); font-size: .76rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.campaign-pricing strong { color: var(--text-color); font-size: clamp(1.45rem, 3vw, 2rem); line-height: 1.1; }
+.campaign-pricing span { color: var(--text-light-color); font-size: .88rem; }
+.campaign-pricing--featured { border-color: color-mix(in srgb, var(--brand-cyan) 78%, var(--border-color)); }
+@media (max-width: 700px) { .launch-pricing { grid-template-columns: 1fr; } .launch-pricing__audience { padding: 14px 0 0; border-top: 2px solid var(--brand-cyan); border-left: 0; } }
